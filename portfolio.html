@@ -105,7 +105,8 @@
         <div class="content">
           <button class="accordion"> Section 1 </button>
             <div class="panel" id="panel">
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+              <p> <a href="zoom.html"></a></p>
+              <p> <a href="zoom1.html"></a></p>
             </div>
           <button class="accordion"> Section 2 </button>
              <div class="panel" id="panel">
@@ -180,43 +181,39 @@
     </div>
        <h3> Overlay</h3>
          <p>Lorem ipsum..</p>     
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <div class="selection">
-            <button onclick="filterDiv('all')" class="all">All</button> 
-           <button onclick="filterDiv('furits')" class="furits">Furits</button>
-            <button onclick="filterDiv('colors')" class="colors">Colors</button> 
-            <button onclick="filterDiv('cars')" class="cars"> Cars</button>
-            <button class="animals"> Animals</button>
-            <div class="filterDiv animals"> Cat</div>
-            <div class="filterDiv animals cars colors"> Kiwi</div>
-            <div class="filterDiv furits colors"> Orange</div>   
-            <div class="filterDiv animals"> Hen</div>
-            <div class="filterDiv animals"> Horse</div>
-            <div class="filterDiv furits"> pinapple</div>
-            <div class="filterDiv cars"> Toyota</div>
-            <div class="filterDiv furits"> Golden Menlod</div>
-            <div class="filterDiv animals"> Bear</div>
-            <div class="filterDiv colors">Pink </div>
-            <div class="filterDiv animals"> Dog </div>
-            <div class="filterDiv cars"> Benz </div>
-            <div class="filterDiv cars"> Hunder </div>
-            <div class="filterDiv cars"> BMW </div>
-        </div>
+       </div>
+     </div>
+     <div class="column">
+       <div class="content">
+         
+     <div id="myContainerBtn">
+        <button class="btn active" onclick="filterDiv('all')">All</button>
+        <button class="btn" onclick="filterDiv('animal')">Animal</button>
+        <button class="btn" onclick="filterDiv('color')"> Color</button>
+        <button class="btn" onclick="filterDiv('furit')"> furit</button>
+    </div>
+        <div class="filterElet furit color">Tomato </div>
+        <div class="filterElet animal"> Wolf</div>
+        <div class="filterElet furit"> Pinapple</div>
+        <div class="filterElet color animal"> Kiwi</div>
+        <div class="filterElet animal"> Hen</div>
+        <div class="filterElet furit"> Apple</div>
+       <div class="filterElet color furit"> Orange</div>
+       <div class="filterElet animal"> Dog</div>
+       <div class="filterElet color"> bule</div>
+       <div class="filterElet furit"> lemon</div>
         </div>
       </div>
        <!--- END ROW-->
     </div>
+
     <div class="content">
-      <img src="bear.jpg" alt="Bear" style="width:100%">
-      <h3>Some Other Work</h3>
-      <p>Lorem ipsum..</p>
+     
     </div>
     <!-- END MAIN -->
     </div>
 </body>
 <script src="js/portfoilosTabScript.js"></script>
 <script src="js/tabGallery.js"></script>
+<script src="js/filter.js"></script>
 </html>

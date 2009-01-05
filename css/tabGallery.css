@@ -18,21 +18,20 @@
     z-index: 1;
     padding-top: 100px;
     margin: auto;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
     overflow: auto;
     background-color: #000000;
     color: #fefefe;
     cursor: pointer;
-    user-select: none;
 }
 .modalContent {
     width: 100%;
     position: relative;
     margin: auto;
-    top: 0;
     left: 0;
+    top: 0;
     width: 90%;
 }
 .mySlide{
@@ -48,11 +47,11 @@
 }
 .close{
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 0px;
+    right: 5px;
     color: aliceblue;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
     cursor: pointer;
 }
 .mySlide img{
@@ -68,7 +67,7 @@
 }
 .pervModal ,.nextModal{
     position: absolute;
-    top: 50%;
+    top: 55%;
     margin-top: -50px;
     cursor: pointer;
     width: auto;
@@ -103,7 +102,7 @@
 }
 @-webkit-keyframes scale {
     from{ scale: 0;}
-    to{ scale: ;}
+    to{ scale:1;}
 }
 @keyframes scale {
     from{ scale: 0;}

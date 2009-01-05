@@ -1,11 +1,36 @@
-.filterDiv{
+.filterElet{
     display: none;
-    padding: 5px;
-    border: 1px solid red;
+    padding: 10px;
 }
-.filterDiv:nth-child(even){
-    background-color: rgb(155, 137, 113);
-}
-.show{
+.show {
     display: block;
-}
+  }
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+     color: white;
+  }
+  table{
+     border-spacing: 0;
+     width: 50%;
+     border: 1px solid #ddd;
+     cursor: pointer;
+  }
+  th , td {
+      text-align: center;
+      padding: 10px;
+  }
+ tr:nth-child(even){
+     background-color: antiquewhite;
+ }

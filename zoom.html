@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zoom</title>
+    <style>
+        *{ box-sizing: border-box;}
+        .zoom-container{
+            position: relative;
+        }
+        #myImg{
+            width: 300px;
+            height: 300px;
+        }
+        .zoom-lens{
+            position: absolute;
+            border: 1px solid white;
+            width: 40px;
+            height: 40px;
+        }
+        .resultImg{
+            border: 1px solid blue;
+            width: 300px;
+            height: 400px;
+        }
+        .marnificent-glass{
+            position: relative;
+        }
+        .glass-zoom{
+            position: absolute;
+            border: 3px solid black;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            cursor: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="zoom-container">
+        <img  id="myImg" src="../Decrown-Tech/img/img_5terre.jpg" alt="">
+        <div class="resultImg" id="resultImg"></div>
+    </div>
+</body>
+  <script>
+      function zoomImg( img , result){
+      var img , result , lens , rx ,ry ;
+         img = document.getElementById( img );
+         result = document.getElementById( result );
+         lens = document.createElement("div");
+         lens.setAttribute("class" , "zoom-lens");
+         img.parentElement.insertBefore( lens , img);
+    
+
+         /*get the ratio b/w result Div && lens Div */
+         rx = result.offsetWidth / lens.offsetWidth ;
+         ry = result.offsetHeight / lens.offsetHeight ;
+
+         /* Background image */
+          result.style.backgroundImage = "url('"+ img.src + "')";
+          result.style.backgroundSize = (img.width * rx) + "px " + (img.width * ry) + "px ";
+
+          lens.addEventListener("mousemove" , moveCusor);
+          img.addEventListener("mousemove" , moveCusor);
+          /* for mobile */
+          lens.addEventListener("touchmove" , moveCusor);
+          img.addEventListener("touchmove" , moveCusor);
+
+          function moveCusor(e){
+              var pos , x ,y ;
+            pos = getCusorPos(e);
+            /*get the width and height of the lens */
+             w = lens.offsetWidth / 2 ;
+             h = lens.offsetHeight /2 ;
+            /* get the cusor position */
+             x = pos.x - w ;
+             y = pos.y - h ;
+
+             if(x > img.width - (lens.offsetWidth)){ x = img.width - (lens.offsetWidth)};
+             if( x < 0 ){ x = 0 };
+             if( y > img.height - ( lens.offsetHeight)){ y = img.height - (lens.offsetHeight)};
+             if(y < 0){ y = 0 };
+             /* positiion the lens */
+             lens.style.left = x + "px";
+             lens.style.top = y + "px";
+             /*display what the lens see */
+             result.style.backgroundPosition = "-" + (x * rx) + "px -" + (y * ry) + "px";
+
+          }
+          function getCusorPos(e){
+              var p , x , y ;
+              x = 0 , y = 0 ;
+             e = e || window.event ;
+             
+             p = img.getBoundingClientRect();
+             x = e.pageX - p.left ;
+             y = e.pageY - p.top ;
+
+             /*Consider other scrolling */
+             x = x - window.pageXOffset ;
+             y = y - window.pageYOffset ;
+              
+             return {x : x , y : y};
+          }
+      }
+
+      
+      zoomImg( "myImg" , "resultImg");
+  </script>
+</html>

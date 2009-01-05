@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+   <div id="myContainerBtn">
+       <button class="btn active" onclick="filterDiv('all')">All</button>
+       <button class="btn" onclick="filterDiv('animal')">Animal</button>
+       <button class="btn" onclick="filterDiv('color')"> Color</button>
+       <button class="btn" onclick="filterDiv('furit')"> furit</button>
+   </div>
+   <div class="filterElet furit color">Tomato </div>
+   <div class="filterElet animal"> Wolf</div>
+   <div class="filterElet furit"> Pinapple</div>
+   <div class="filterElet furit animal"> Kiwi</div>
+   <div class="filterElet animal"> Hen</div>
+   <div class="filterElet furit"> Apple</div>
+   <div class="filterElet color furit"> Orange</div>
+   <div class="filterElet animal"> Dog</div>
+   <div class="filterElet color"> bule</div>
+   <div class="filterElet furit"> lemon</div>
+
+   <!-- Sort-->
+   <table id="myTable">
+       <tr>
+           <th onclick="sortTable(0)">Name</th>
+           <th onclick="sortTable(1)"> Country</th>
+       </tr>
+       <tr>
+       <td> Berglunds snabbkop</td>
+        <td>Sweden</td>	
+       </tr>
+       <tr>
+       <td>North/South</td> 
+           <td> UK</td>
+        </tr>
+        <tr>
+            <td> Alfreds Futterkiste </td>
+            <td> Germany </td>
+        </tr>
+        <tr>
+            <td> Koniglich Essen</td>
+            <td>	Germany </td>
+        </tr>
+      <tr>
+          <td>  Magazzini Alimentari Riuniti</td>
+          <td> Italy</td>
+      </tr>
+      <tr>
+         <td> Paris specialites </td>
+         <td> France</td>
+      </tr>
+      <tr>
+          <td> Island Trading </td>	
+          <td>UK</td>
+      </tr>
+      <tr>
+       <td> Laughing Bacchus Winecellars</td>
+        <td>Canada</td>
+       </tr>
+   </table>
+</body>
+<script src="js/filter.js"></script>
+<script src="js/sort.js"></script>
+</html>
