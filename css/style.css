@@ -1,0 +1,436 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+#warpper {
+   display: grid;
+   position: relative;
+   grid-template-columns: repeat( 12,1fr);
+   grid-auto-rows: minmax(50px , auto);
+   min-width: 90%;
+   margin: 0  auto ;
+   padding: 0 ; 
+   gap: 10px;
+}
+/*----------------------- GRID ---------------------------*/
+#warppe {
+   background-color: darkturquoise;
+}
+header {
+    grid-column: 1/13;
+}
+nav {
+    grid-column: 1/13;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: 50px;
+    box-sizing: border-box;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(50px , auto);
+    background-color: #000000;
+    grid-column: 1/13;
+    grid-row: 3/6;
+    box-sizing: border-box;
+    gap: 10px;
+}
+article {
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: minmax(50px,auto);
+    grid-column: 2/12;
+    grid-row: 6/8;
+    box-sizing: border-box;
+    gap: 10px;
+}
+aside {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column: 3/11;
+    grid-row: 8/13;
+    box-sizing: border-box;
+    gap: 10px;
+    background-color: #000000;
+}
+footer {
+    display: grid;
+    grid-column: 1/13;
+    box-sizing: border-box;
+    grid-row: 13/15;
+}
+@media (min-width:640px) {
+header {
+    grid-column: 1/13;
+}
+nav {
+    grid-column: 1/13;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    grid-template-rows: 50px;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(50px , auto);
+    grid-column: 1/13;
+    grid-row: 3/6;
+    box-sizing: border-box;
+    gap: 10px;
+}
+article {
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: minmax(50px,auto);
+    grid-column: 2/8;
+    grid-row: 6/8;
+    box-sizing: border-box;
+    gap: 10px;
+}
+aside {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(50px,auto);
+    grid-column: 8/12;
+    grid-row: 6/8;
+    box-sizing: border-box;
+    gap: 10px;
+}
+footer {
+    display: grid;
+    grid-column: 1/13;
+    grid-row: 8/10;
+}
+}
+/*------x-------------------- GRID -------------------x-------*/
+
+
+/*------------------------- Grid display ----------------------*/
+#grid {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(100% ,auto);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    display: none;
+}
+#grid p {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border: 1px solid ;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+}
+#grid .grid {
+    display: none;
+}
+input:checked + #warpper #grid {
+    display: grid;
+}
+/*--------x-------------- Grid display-----------------------------x---------*/
+
+/*------------------------ Marquee ----------------------------------------*/
+nav li {
+    display: inline;
+    padding: 10px;
+}
+nav span {
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-right: 5px solid rgb(241, 59, 171);
+} 
+.update {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 15px;
+}
+/*---------x--------------Marquee---------------------------------x-----------------*/
+/*---------------------- Form ----------------------------------------------------*/
+section #phoneList {
+   margin: 0 auto;
+   text-align: center;
+}
+section li {
+    list-style: none;
+}
+section ul li {
+    border-bottom: 1px solid brown;
+}
+/*------------------x----------------------- Form ------------------------------*/
+/*-------------------------------- section grid --------------------------*/
+section >* {
+    background-color: darkblue;
+}
+   .one {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-basis: auto;
+        grid-column: 1/13;
+    }
+    .two {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column:1/13 ;
+    }
+    .three {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column: 1/13;
+    }
+    .four {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column: 1/13;
+    }
+    .five {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-column: 1/13;
+    }
+@media (min-width:600px) {
+    .one {
+        display: flex;
+        grid-column: 1/6;
+        grid-row: 1/5;
+    }
+    .two {
+        display: flex;
+        grid-column:6/10 ;
+        grid-row: 1/5;
+    }
+    .three {
+        display: flex;
+        grid-column: 10/13;
+        grid-row: 1/5;
+    }
+    .four {
+        display: flex;
+        grid-column: 1/7;
+        grid-row: 5/8;
+    }
+    .five {
+        display: flex;
+        grid-column: 7/13;
+        grid-row: 5/8;
+    }
+    }
+@media (min-width:760px) {
+.one {
+    display: flex;
+    grid-column: 1/6;
+    grid-row: 1/7;
+}
+.two {
+    display: flex;
+    grid-column:6/10 ;
+    grid-row: 1/4;
+}
+.three {
+    display: flex;
+    grid-column: 10/13;
+    grid-row: 1/4;
+}
+.four {
+    display: flex;
+    grid-column: 6/10;
+    grid-row: 4/7;
+}
+.five {
+    display: flex;
+    grid-column: 10/13;
+    grid-row: 4/7;
+}
+}
+/*--------X---------- Section grid-------------------X-------------*/
+/*=---------------------- Article -------------------------------*/
+article >* {
+   background-color: #ffffff;
+}
+.newsone {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/6;
+    grid-row: 1/4;
+}
+.newstwo {
+    display: flex;
+    flex-direction: column;
+    grid-column:6/13 ;
+    grid-row: 1/4;
+}
+.newsthree {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/13;
+    grid-row: 4/8;
+    box-shadow: 5px 30px  15px  #868686;
+}
+.newsfour {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/10;
+    grid-row: 8/13;
+}
+@media (min-width:650px) {
+.newsone {
+    display: flex;
+    grid-column: 1/6;
+    grid-row: 1/4;
+}
+.newstwo {
+    display: flex;
+    grid-column:6/13 ;
+    grid-row: 1/4;
+}
+.newsthree {
+    display: flex;
+    grid-column: 2/9;
+    grid-row: 4/7;
+}
+.newsfour {
+    display: flex;
+    grid-column: 1/13;
+    grid-row: 7/10;
+}
+}
+/*=----------X------------ Article -------------------------X------*/
+/* ----------------- Img ------------------------------- */
+section >* img {
+    width: 100%;
+    height: 100%;
+}
+section .ttext {
+    display: flex;
+    position: absolute;
+}
+section .ttext p {
+    color: #ffffff;
+    margin: 10px;
+}
+article img {
+    width: 100%;
+    height: 100%;
+}
+aside  img {
+     width: 50%;
+}
+/* ---------X-------- Img -------------------------X------ */
+/* ------------- article imgbox---------------------------------- */
+article .imgbox {
+    width: 100%;
+    height: 100%;
+}
+/* --------x--------- article imgbox----------------------------X------- */
+td.atext {
+    min-width: 450px;
+    max-width: 650px;
+    text-align: left;
+    padding: 20px;
+    margin: 20px;
+    top: 50%;
+}
+/* ---------------------- Aside ------------------------------------------ */
+aside>* {
+    background-color: khaki;
+}
+.staycont {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topone {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.toptwo {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topthree {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topfour {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topfive {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topsix {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+@media (min-width:650px) {
+.top {
+    display: flex;
+    grid-column: 1/13;
+    flex-direction: row;
+}
+.topone {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.toptwo {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topthree {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topfour {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topfive {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+.topsix {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/13;
+}
+}
+/* -----------------  Footer -------------------------- */
+footer {
+    background-color: aqua;
+    text-align: center;
+}
+footer img {
+    width: 100%;
+}
