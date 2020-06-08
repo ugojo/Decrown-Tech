@@ -7,18 +7,18 @@
   // });  
 //});
 
-   var xhr = XMLHttpRequest() ;
-   xhr.onload = function () { 
-     if (xhr.status==200) {
-       document.getElementById ('warpper').innerHTML = xhr.responseText;
-     }
-   };
-   xhr.open ( 'GET' , 'data/data.html', true);
-   xhr.send(null);
+ //  var xhr = XMLHttpRequest() ;
+  // xhr.onload = function () { 
+   //  if (xhr.status==200) {
+    //   document.getElementById ('warpper').innerHTML = xhr.responseText;
+    // }
+   //};
+   //xhr.open ( 'GET' , 'data/data.html', true);
+   //xhr.send(null);
 
    $('ul a').on( 'click' ,function (e) {
     e.preventDefault();
-   var url = this.href ;
+    var url = this.href ;
 
     $('ul a.current').removeClass( 'current');
     $(this).addClass('current');
