@@ -23,7 +23,7 @@
     $('ul a.current').removeClass( 'current');
     $(this).addClass('current');
     $('nav').remove();
-    $('#warpper').load( url  + ' #warpper').hide().fadeIn('slow');
+    $('#warpper').load( `${url} #warpper`).hide().fadeIn('slow');
 });
 
 $( function () {
