@@ -7,14 +7,14 @@
   // });  
 //});
 
- //  var xhr = XMLHttpRequest() ;
-  // xhr.onload = function () { 
-   //  if (xhr.status==200) {
-    //   document.getElementById ('warpper').innerHTML = xhr.responseText;
-    // }
-   //};
-   //xhr.open ( 'GET' , 'data/data.html', true);
-   //xhr.send(null);
+   var xhr = XMLHttpRequest() ;
+   xhr.onload = function () { 
+     if (xhr.status==200) {
+       document.getElementById ('warpper').innerHTML = xhr.responseText;
+     }
+   };
+   xhr.open ( 'Post' , 'data/data.html', true);
+   xhr.send(null);
 
    $('ul a').on( 'click' ,function (e) {
     e.preventDefault();
