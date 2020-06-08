@@ -29,7 +29,7 @@
 $( function () {
    $('#form').on('submit' ,function (e) {
       e.preventDefault() ;
-   var details = $('#login').serialize() ;
+   var details = $('#form').serialize() ;
    $.post ( 'https://ugojo.github.io/Decrown-Tech/' , details, function (data) {
       $('#form').html(data)
    });
