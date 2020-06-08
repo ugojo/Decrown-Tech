@@ -20,9 +20,9 @@
     e.preventDefault();
    var url = this.href ;
 
-    $('ul a.current').removeClass();
+    $('ul a.current').removeClass( 'current');
     $(this).addClass('current');
-    $('article').remove();
+    $('nav').remove();
     $('#warpper').load( url  + ' #warpper').hide().fadeIn('slow');
 });
 
@@ -30,7 +30,7 @@ $( function () {
    $('#form').on('submit' ,function (e) {
       e.preventDefault() ;
    var details = $('#form').serialize() ;
-   $.post ( 'https://ugojo.github.io/Decrown-tech/' , details, function (data) {
+   $.post ( 'https://ugojo.github.io/Decrown-Tech/' , details, function (data) {
       $('#form').html(data)
    });
    });
