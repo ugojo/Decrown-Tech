@@ -60,4 +60,22 @@ function  loadRate() {
          loadRates();
       });
    });
+};
+var elLoc = document.getElementById('loc');
+var msg = 'sorry we cant get your location' ;
+if (modernizr.geolocation) {
+   navigator.geolocation.getCurrentPosition(success,fail);
+  elLoc.textContent='checking location..............';
+}else { elLoc.textContent= msg ;
+}
+function success(Position ) {
+   msg = '<h3>longittude<br>' ;
+   msg += Position.coords.longtitude + '</h3>';
+   msg += '<h3> lattitude <br>';
+   msg == Position.coords.latitude + '</h3>'
+   elloc.innerHTML = msg ;
+};
+function fail(msg) {
+   elLoc.textContent = msg;
+   console.log(msg.Code);
 }
