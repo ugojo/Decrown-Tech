@@ -79,3 +79,32 @@ $( function () {
    //elLoc.textContent = msg;
   // console.log(msg.Code);
 //}
+$( function() {
+   $('menu a').on('click' ,function(e) {
+      e.preventDefault();
+      var url = this.href ;
+      var $warr =$('#warpper');
+
+      $('menu a.current').removeClass('current');
+      $( this).addClass('current');
+      $('#warpper').remove();
+
+      $.ajax( {
+         type: "POST" ,
+         url :url ,
+         timeout: 2000,
+         beforeSend:function() {
+            $warr.append('<div id="loading">Loading</div>');
+         },
+         complete: function() {
+            $('#loading').remove();
+         },
+         success: function(data) {
+            $warr.html($(data).find('#warpper')).hide().fadeIn(400);
+         },
+         fail: function() {
+            $('#panel').html('<div class="loading">Please try again soon.</div>');
+         }
+      });
+   })
+})
