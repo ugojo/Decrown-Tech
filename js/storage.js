@@ -1,4 +1,4 @@
-if (window.localStorage) {
+if (window.localstorage) {
    var txtuse = document.getElementById ('username');
    var txtans = document.getElementById('answer') ;
    txtuse.Value = localStorage.getItem('username');
