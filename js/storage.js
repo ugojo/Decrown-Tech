@@ -10,4 +10,4 @@ if (window.localstorage) {
    txtans.addEventListener('input', function () {
        localStorage.setItem('username',answer);
    },false);
-}
+} 

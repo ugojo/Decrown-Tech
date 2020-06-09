@@ -36,31 +36,32 @@ $( function () {
    });
 });
 //Exchange Rate
-//$('#exchangeRates').append( '<div id="rates"></div><div id="reload"></div>');
-//function  loadRate() {
-  // $.getJSON('data/rates.json')
-   //.done( function(data) {
-     // var d = new Date();
-      //var hrs = d.getHours();
-     // var mins = d.getMinutes();
-      //var msg= '<h2> Exchange Rates </h2>' ;
-     // $.each( data , function(key,val) {
-      //   msg+= '<div class="' + key + '">' + key + ':' + val + '</div>';
-      //});
-        // msg += '<br> last updated :' + hrs + ':' + mins + '<br>';
-        // $('#rates').html(msg); 
-  // }).fail( function() {
-     //  $('#aside').append(' Sorry we cant load rates...........................') ;
-   //}).always( function() {
-      //var reload = '<a id="refresh" class="refresh">'
-        // reload += '<button>refresh</button> </a>';
-      //$('#reload').html(reload);
-     // $('#refresh').on('click' ,function(e) {
-       //  e.preventDefault();
-        // loadRates();
-      //});
-   //});
-//};
+$('#exchangeRates').append( '<div id="rates"></div><div id="reload"></div>');
+function  loadRate() {
+   $.getJSON('data/rates.json')
+   .done( function(data) {
+     var d = new Date();
+      var hrs = d.getHours();
+      var mins = d.getMinutes();
+      var msg= '<h2> Exchange Rates </h2>' ;
+      $.each( data , function(key,val) {
+         msg+= '<div class="' + key + '">' + key + ':' + val + '</div>';
+      });
+       msg += '<br> last updated :' + hrs + ':' + mins + '<br>';
+         $('#rates').html(msg); 
+   }).fail( function() {
+       $('#aside').append(' Sorry we cant load rates...........................') ;
+   }).always( function() {
+      var reload = '<a id="refresh" class="refresh">'
+         reload += '<button>refresh</button> </a>';
+      $('#reload').html(reload);
+      $('#refresh').on('click' ,function(e) {
+         e.preventDefault();
+         loadRates();
+      });
+   });
+   loadRates();
+};
 //var elLoc = document.getElementById('loc');
 //var msg = 'sorry we cant get your location' ;
 //if (modernizr.geolocation) {

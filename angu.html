@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> angular js</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.js"></script>
+    <script src="js/angu.js"></script>
+</head>
+<body>
+    <table ng-controller="productCtrl">
+    <tr> <td>item</td> <td>{{description}}</td> </tr>
+    <tr>cost <td> ${{ cost }}</td></tr>
+    <tr> <td>Quantity</td><td> <input type="number"  ng-modle="qty"/> </td></tr>
+    <tr><td>{{ qty * cost|currency }}</td></tr>
+    </table>
+</body>
+</html>
