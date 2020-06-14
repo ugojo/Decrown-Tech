@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> angular js</title>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4-build.3588/angular.js"></script>
+    <script src="1s "></script>
     <script src="js/angu.js"></script>
 </head>
 <body>
@@ -13,6 +13,13 @@
     <tr>cost <td> ${{ cost }}</td></tr>
     <tr> <td>Quantity</td><td> <input type="number"  ng-modle="qty"/> </td></tr>
     <tr><td>{{ qty * cost|currency }}</td></tr>
+    </table>
+    <table ng-controller = "timeCtrl"></tr>
+    <tr> <th>time</th> <th> tittle</th><th>discriptions</th> </tr>
+    <tr ng-repeat ="session in session"></tr>
+    <tr> <td>{{session.time}}</td></tr>
+    <tr> <td> {{session.title}}</td></tr>
+    <tr> <td>{{session.discriptions}}</td></tr>
     </table>
 </body>
 </html>
