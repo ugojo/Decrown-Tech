@@ -1,0 +1,7 @@
+#grallery img {
+    width: 300px;
+    height: 300px;
+}
+#buttons .active {
+    background-color: brown;
+}
