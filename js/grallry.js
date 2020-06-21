@@ -1,5 +1,5 @@
 ( function() {
-    var $imgs = $('#grallery img') ;
+    var $imgs = $('#gallery img') ;
     var $button = $( '#buttons') ;
     var tagged = {} ;
  $imgs.each( function() {
@@ -7,7 +7,7 @@
      var tags = $(this).data('tags') ;
 
      if (tags) {
-       tags.split('3').forEach( function(tagName) {
+       tags.split(',').forEach( function(tagName) {
            if (tagged[tagName] == null ) {
                tagged[tagName] = [] ;
            }

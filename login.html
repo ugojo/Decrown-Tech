@@ -8,23 +8,46 @@
 </head>
 <body>
     <div id="logWarpper">
+      
         <section>
-            <form action="https://ugojo.github.io/Decrown-Tech/" id="form">
-             <label for="form" id="form" class="form middle"> login </lable> <br>
+            <div id="main"></div>
+            <form action="https://ugojo.github.io/Decrown-Tech/" id="login">
+             <label class="form middle"> login </lable> <br>
              <label  for="username"> Username</lable> <br>
-             <input id="Username"  type="text" id="name" placeholder="Enter Username"> <br>
-             <label for="pasword"> Password</label> <br>
-             <input type="password" name="password" id="pass"> <br>
-             <label for="Email"> Email</label> <br>
+             <input id="username"  type="text" name="username" placeholder="Enter username"> <br>
+             <label for="pwd"> Password</label> <br>
+             <input type="password" name="pwd" id="pwd"> <br>
+             <input type="checkbox" name="showpwd" id="showpwd">
+             <label for="showpwd">show password </label> <br>
+            <!------ <label for="Email"> Email</label> <br>
              <input type="email" name="email" id="mail" placeholder="Email enter here"> <br>
              <label for="answer">comment </label> <br>
-             <textarea name="text" id="answer" cols="30" rows="10"></textarea> <br>
+             <textarea name="text" id="answer" cols="30" rows="10"></textarea> <br> ----->
              <input type="submit" value="submit">
              </form>
+             <form action="https://ugojo.github.io/Decrown-Tech/" method="post" id="interests">
+                <label for="interests">Genres </label> <br>
+                <label for="all"><input type="checkbox" name="all" id="all" value="all">All </label> <br>
+                <label><input type="checkbox" name="genre"  value="html">Html </label> <br>
+                <label><input type="checkbox" name="genre"  value="xml"> Xml </label> <br>
+                <label><input type="checkbox" name="genre"  value="javascript"> Javascript </label> <br>
+                <label><input type="checkbox" name="genre"  value="python"> Python </label> <br>
+             </form>
+             <form action="https://ugojo.github.io/Decrown-Tech/" method="post" id="how-heard">
+                <label for=""> how did you hear about us</label> <br>
+                 <input type="radio" name="heard" value="google"> <label for="google"> Google</label> <br>
+                 <input type="radio" name="heard" value="newspepper"><label for="newspepper">Newspepper</label> <br>
+                 <input type="radio" name="heard" value="friend"> <label for="friend"> Friend</label> <br>
+                 <input type="radio" name="heard" id="other" value="other">
+                 <label for="other"> Others</label> <br>
+                <input type="text" name="other-input" id="other-text">  <br>
+                <input type="submit" value="submit">
+            </form>
         </section>
     </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/storage.js"></script>
+   <script src="js/helper.js"></script>
+   <script src="js/form.js"></script>
+   <script src="js/chk-radio.js"></script>
+   <script src="js/radio.js"></script>
 </body>
 </html>
