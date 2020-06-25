@@ -14,15 +14,18 @@
             <form action="https://ugojo.github.io/Decrown-Tech/" id="login">
              <label class="form middle"> login </lable> <br>
              <label  for="username"> Username</lable> <br>
-             <input id="username"  type="text" name="username" placeholder="Enter username"> <br>
+             <input id="username"  type="text" name="username" placeholder="Enter username"  required> <br>
              <label for="pwd"> Password</label> <br>
-             <input type="password" name="pwd" id="pwd"> <br>
-             <input type="checkbox" name="showpwd" id="showpwd">
+             <input type="password" name="pwd" id="pwd" required  placeholder="password"> <br>
+             <input type="checkbox" name="showpwd" id="showpwd" >
              <label for="showpwd">show password </label> <br>
-            <!------ <label for="Email"> Email</label> <br>
-             <input type="email" name="email" id="mail" placeholder="Email enter here"> <br>
-             <label for="answer">comment </label> <br>
-             <textarea name="text" id="answer" cols="30" rows="10"></textarea> <br> ----->
+             <label for="con-pwd">confirm password </label> <br>
+             <input type="password" name="con-pwd" id="con-pwd" placeholder="confirm password"  required> <br>
+             <label for="Email"> Email</label> <br>
+             <input type="email" name="email" id="mail" placeholder="Email enter here" required> <br>
+             <label for="comment">comment </label> <br>
+             <textarea name="comment" id="comment" cols="30" rows="10"></textarea> <br>
+             <span id="count" class="hide"></span> <br>
              <input type="submit" value="submit">
              </form>
              <form action="https://ugojo.github.io/Decrown-Tech/" method="post" id="interests">

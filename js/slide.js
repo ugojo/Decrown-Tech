@@ -1,4 +1,5 @@
 $('.slide').each( function() {
+    var $imgs = $('img ')
     var $this = $(this) ;
     var $group = $this.find('.slide-group') ;
     var $slides = $this.find('.slide') ;
@@ -13,7 +14,7 @@ $('.slide').each( function() {
        
    advance();
    
-    if ( $group.is(':animated') || currentIndex === newIndex ) {
+    if ( $group.is(':animated') || currentIndex === 0 ) {
         return ;
     }
      buttonArray[currentIndex].removeClass('active') ;
@@ -27,7 +28,7 @@ $('.slide').each( function() {
      } 
      $slides.eq(newIndex).css({ left : slideLeft , display : 'block' }) ;
      $group.animate ( { left: animateLeft , function() {
-         $slides.eq(currentIndex).css({display:'none'}) ;
+         $slides.eq(currentIndex).css({display:'block'}) ;
          $slides.eq(newIndex).css({ left :0}) ;
          $group.css( { left:0});
          currentIndex = newIndex ;
@@ -36,10 +37,10 @@ $('.slide').each( function() {
     
    //the advance method is called 
    function advance() {
-       clearTimeout(timeout) ;
-     timeout = setTimeout ( function() {
+       clearInterval(timeout) ;
+     timeout = setInterval ( function() {
          if (currentIndex < ($slides.length - 1)) {
-             move( currentIndex + 1) ;
+             move( currentIndex + 1 ) ;
          }else {
              moveTo(0) ;
          } 
@@ -48,7 +49,7 @@ $('.slide').each( function() {
    $.each( $slides , function(index) {
       var $button = $('<button type="button" class="slide-btn"> &bull;</button>') ;
       if ( index === currentIndex) {
-          $button.addClass('active');
+          $button.addlass('active');
       }
           $button.on ( 'click', function() {
               moveTo(index) ;

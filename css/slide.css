@@ -24,7 +24,8 @@
 button {
     width: 50px;
     height: 20px;
+    padding: 10px 20px;
 }
 button.active {
-    background-color: ;
+    background-color:black ;
 }

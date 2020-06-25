@@ -8,4 +8,4 @@
          };
          el.attachEvent( 'on' + event , el[ event + callback]) ;
      }
- }
+ };
