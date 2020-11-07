@@ -124,7 +124,4 @@ header .menu-btn:checked~.menu {
     .header li a:hover {
         color: rgb(63, 150, 81);
     }
-    .header .menu .current:hover {
-
-    }
 }
