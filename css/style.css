@@ -133,7 +133,7 @@ footer {
     opacity: 0.5;
 }
 #grid .grid {
-    display: none;
+    display: grid;
 }
 input:checked + #warpper #grid {
     display: grid;
