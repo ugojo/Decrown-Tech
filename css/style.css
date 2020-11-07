@@ -58,9 +58,13 @@ body{
     flex: 50%;
 }
 footer {
-    background-color: aqua;
+    background-color: black;
+    color: white;
     text-align: center;
 }
 footer img {
     width: 100%;
+}
+hr{
+    width: 100px;
 }
