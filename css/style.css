@@ -25,11 +25,21 @@ body{
 }
 .acticle{
     flex: 100%;
-    height: 600px;
+    height: 1000px;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     text-align: center;
 }
+.acticle_more{
+    flex: 100%;
+    height: 500px;
+    padding: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
 .text{
  font-family: Georgia, 'Times New Roman', Times, serif;
  font-size: x-large;
@@ -53,6 +63,36 @@ body{
 .textbtn:focus{
     border: none;
 }
+/*----- Skill---------*/
+.skillcontainer{
+    display: inline-block;
+    width: 500px;
+    height: 50px;
+    background-color: wheat;
+}
+.left{
+    float: left;
+    margin: 2px;
+    
+}
+.photoshop{
+    display: block;
+    width: 40%;
+    height: 100%;
+    background-color: tomato;
+}
+.webdesign{
+    display: block;
+    width: 85%;
+    height: 100%;
+    background-color: tomato;
+}
+.programming{
+    display: block;
+    width: 78%;
+    height: 100%;
+    background-color: tomato;
+}
 /*----Footer-------------*/
 .footer{
     flex: 50%;
@@ -72,6 +112,11 @@ a{
     color: white;
 }
 .fa{
-    font-size: 30px;
+    font-size: 25px;
+}
 
+@media  screen and (max-width:600px){
+    .skillcontainer{
+        width: 300px;
+    }
 }
