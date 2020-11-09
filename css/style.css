@@ -4,9 +4,182 @@
 }
 /*--------body--------*/
 body{
-    margin: 0 auto;
-    padding: 0 auto;
+  margin: auto;
 }
+/*------- Grid--------*/
+
+.warpper {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12,1fr);
+    min-width: 90%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+/*#warpper >* {
+     background-color: aqua;
+     padding: 30px;
+}*/
+#grid {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(100% ,auto);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 0;
+    display: none;
+}
+input[type="checkbox"] {
+      display: none;
+}
+#grid p {
+    border: 1px solid;
+    background-color:#000;
+    opacity: 0.5;
+    margin: 0;
+}
+input:checked + #warpper #grid {
+    display: grid;
+}
+.header {
+    background-color: violet;
+}
+.nav {
+    background-color: black;
+}
+.acticle {
+    background-color: white;
+}
+.section {
+    background-color:rgba(0 , 0 ,0 ,0.2);
+}
+.aside {
+    background-color: white;
+}
+.footer {
+    background-color: black;
+}
+/*positioning*/
+.header {
+    grid-column: 1/13;
+    
+}
+.nav {
+   grid-column: 1/13;
+}
+.acticle {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/13;
+    gap: 10px;
+}
+.section {
+    grid-column:1/13 ;
+    justify-content: center;
+    justify-self: center;
+    
+}
+.aside {
+    grid-column: 1/13;
+    justify-content: center;
+    justify-self: center;
+    
+}
+.footer {
+grid-column: 1/13;
+}
+
+/*---------End Of Grid--------*/
+.header{
+    grid-area: header;
+    background-color: rgba(0 , 0 ,0 ,0.2);
+    color: white;
+}
+.background{
+    background-image:linear-gradient(rgba(0 , 0 ,0 ,0.7)
+    ,rgba(0, 0 , 0, 0.7)) , url(../img/laptop_phone.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.navpad{
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 20%;
+}
+/*------Text area-------*/
+.navtxt{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+   }
+   .textbtn{
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: rgb(17, 19, 177);
+    border: 1px solid rgb(0, 110, 255);
+    color: white;
+    border-radius: 10PX;
+    cursor: pointer;
+}
+.txtabout{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+    word-wrap: break-word;
+    margin: 5px;
+    padding: 2px;
+}
+.fliptxt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border: 1px solid white;
+    color:white;
+    transform: translate(-50%,-50%);
+}
+.flip-box-txt{
+    position: absolute;
+    font-size: 100px;
+    top: 10%;
+    left: 50%;
+    color: red;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    animation: zoom infinite 2s 0.1s ;
+}
+.bigtxt{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    font-size: x-large;
+    color: black;
+}
+.font{
+    padding: 15px;
+    margin: 20px;
+    word-spacing: 20px;
+}
+
+/*---Img-------------*/
+.flipbox img{
+    width:400px;
+    height: 500px;
+    filter: blur(1px);
+}
+
+/*------ Flex box----
 #flexcontainer{
     display: flex;  
     flex-direction: column;
@@ -21,53 +194,71 @@ body{
     color: white;
     text-align: center;
 }
-.acticle_more{
-    flex: 100%;
+.acticle_row{
+    flex: 10;
     height: 500px;
     padding: 45px;
-    background-color: rgba(0 , 0 ,0 ,0.2);
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
     justify-content: center;
 }
-.background{
-    background-image:linear-gradient(rgba(0 , 0 ,0 ,0.7),rgba(0, 0 , 0, 0.7)) , url(../img/laptop_phone.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-    position: relative;
-}
+-----------------------*/
 
-.text{
- font-family: Georgia, 'Times New Roman', Times, serif;
- font-size: x-large;
- padding: 20%;
-}
 .smalltext{
     font-size: 15px;
-}
-.bigtext{
-    letter-spacing: 3px;
-    word-spacing: 5px;
-}
-.textbtn{
-    font-size: 15px;
-    font-family: sans-serif;
-    background-color: rgb(17, 19, 177);
-    border: 1px solid rgb(0, 110, 255);
-    color: white;
-    border-radius: 10PX;
-    cursor: pointer;
 }
 .textbtn:focus{
     border: none;
 }
+/*----row_container-----*/
+
+/*---- 3D Flip Style----------*/
+.flipbox{
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    perspective: 1000px;
+}
+.flip-box-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+.flipbox:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-box-front{
+    background-color: rgba(0 , 0 ,0 ,0.2);
+    color: black;
+}
+.flip-box-back{
+    background-color: dodgerblue;
+    color: white;
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
 /*----- Skill---------*/
 .skillcontainer{
     display: inline-block;
-    width: 500px;
+    width: 300px;
     height: 50px;
     background-color: wheat;
 }
@@ -95,12 +286,8 @@ body{
     background-color: tomato;
 }
 /*----Footer-------------*/
-.footer{
-    flex: 50%;
-}
 footer {
     background-color: black;
-    border-top: 1px solid white;
     color: white;
     text-align: center;
 }
@@ -116,9 +303,52 @@ a{
 .fa{
     font-size: 25px;
 }
-
-@media  screen and (max-width:600px){
-    .skillcontainer{
-        width: 300px;
+/*-- Media Queria--------*/
+@media  screen and (min-width:992px){
+    .aside {
+        grid-column: 7/13;
+        
     }
+    .section {
+        grid-column:1/7 ;
+        justify-self: center;
+    }
+    .skillcontainer{
+        width: 500px;
+        justify-self: center;
+    }
+    .flipbox{
+        background-color: transparent;
+        width: 300px;
+        height: 400px;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+    }
+    .flipbox img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes zoom{
+ 0%{
+     font-size: 100px;
+ }
+ 25%{
+     font-size: 130px;
+     color: wheat;
+ }
+ 50%{
+     font-size: 140px;
+     color: black;
+ }
+ 75%{
+     font-size: 150px;
+     color:yellow ;
+ }
+ 100%{
+     font-size: 160px;
+     color: rgb(4, 0, 255);
+ }
 }

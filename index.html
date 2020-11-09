@@ -9,60 +9,90 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-  <div id="flexcontainer">
-    <div id="loc"></div>
-    <div id="grid">
-        <p></p><p></p> <p></p><p></p> <p></p><p></p> <p></p><p></p> <p></p><p></p> <p></p><p></p>
+  <input type="checkbox">
+    <div class="warpper" id="warpper">
+      <div id="grid">
+            <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+      </div>
+      <header class="header">
+        <a href="#" class="logo"> DCT </a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"> <span class="nav-icon"></span></label>
+        <ul class="menu">
+          <li> <a href="#"> Home </a></li>
+          <li> <a href="#"> About </a></li>
+          <li> <a href="#"> Contact </a></li>
+          <li> <a href="#"> Login </a></li>
+        </ul>
+     </header>
+      <div class="nav">
+        <div class="background">
+          <div class="navpad">
+          <div class="navtxt">
+                <p class="smalltext"><i> Hi  </i></p>
+            <p class="bigtext"><strong> I'M A WEB DEVELOPER.</strong></h3> <br>
+              <button class="textbtn"> SEE PORTFOLIO</button>
+          </div>
+         </div>
         </div>
-   <header class="header" id="header">
-    <a href="#" class="logo"> DCT </a>
-    <input class="menu-btn" type="checkbox" id="menu-btn">
-    <label class="menu-icon" for="menu-btn"> <span class="nav-icon"></span></label>
-    <ul class="menu" id="menu">
-      <li> <a href="index.html" class="current" > Home </a></li>
-      <li> <a href="#"> About </a></li>
-      <li> <a href="#"> Contact </a></li>
-      <li> <a href="#"> Signup </a></li>
-    </ul>
-   </header>
-     <div class="acticle">
-       <div class="background">
-       <div class="text">
-            <p class="smalltext"><i> Hi  </i></p>
-        <p class="bigtext"><strong> I'M A WEB DEVELOPER.</strong></h3> <br>
-          <button class="textbtn"> SEE PORTFOLIO</button>
-     </div>
-     </div>
-     </div>
-     <div class="acticle_more">
-       <h2 class="left">My Skills </h2> <br>
-       <p> Photoshop</p>
-       <div class="skillcontainer">
-         <div class="photoshop"></div>
-       </div>
-       <p>Web Design</p>
-       <div class="skillcontainer">
-         <div class="webdesign"></div>
-       </div>
-       <p>programming</p>
-       <div class="skillcontainer">
-         <div class="programming"></div>
-       </div>
-     </div>
-   <footer class="footer">
-    
-     <h3> Contact Me</h3> <hr>
-     <div class="contacttext">
-      <p> <i class="fa fa-address-card" aria-hidden="true"></i> Lagos Nigeria </p>
-      <p> <i class="fa fa-phone"></i> 07085797828 </p>
-      <p> <i class="fa fa-envelope-open" aria-hidden="true"></i> Email: <a href="mailto:obiugochukwu003@gmail.com">Obiugochukwu003@gmail.com</a> </p>
-     </div>
-     <p><i> This templet is a &copy;Decrown-Tech 2020 </i></p>
-   </footer>
-   </div>
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/modernizr-2.6.2.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="https://use.fontawesome.com/346dfabac1.js"></script>
+      </div>
+      <div class="acticle">
+        <div class="txtabout">
+          <h3> ABOUT ME</h3>
+           <h4>i love programming</h4>
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, amet! Unde similique voluptatum minus amet 
+             exercitationem reiciendis cupiditate provident nulla distinctio culpa? Sunt vero sapiente doloribus. Quidem, 
+             dignissimos magnam expedita soluta libero quisquam quia nostrum. Molestias dicta reprehenderit dignissimos 
+             quidem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, maiores! </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="flipbox">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+               <img src="../decrowntech/img/myimg.jpg" alt="">
+                <div class="fliptxt"> <p> HIRE ME </p></div>
+            </div>
+            <div class="flip-box-back">
+                <p class="flip-box-txt">
+                   &#128536;
+                </p>
+                <p class="bigtxt">
+                  Thanks for visiting &#128151;
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aside">
+        <div class="skills-box" style="text-align: center;">
+          <h2 class="">My Skills </h2> <br>
+          <p> Photoshop</p>
+          <div class="skillcontainer">
+            <div class="photoshop"></div>
+          </div>
+          <p>Web Design</p>
+          <div class="skillcontainer">
+            <div class="webdesign"></div>
+          </div>
+          <p>programming</p>
+          <div class="skillcontainer">
+            <div class="programming"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+           <h3> Contact Me</h3> <hr>
+        <div class="contacttext">
+           <p> <i class="fa fa-address-card" aria-hidden="true"></i> Lagos Nigeria </p>
+           <p> <i class="fa fa-phone"></i> 07085797828 </p>
+           <p> <i class="fa fa-envelope"></i> Email: <a href="mailto:obiugochukwu003@gmail.com">Obiugochukwu003@gmail.com</a> </p>
+        </div>
+          <p><i> This templet is a &copy;Decrown-Tech 2020 </i></p>
+           <p class="font"> <i style="font-size: 35px;" class="fa fa-facebook"></i> <i style="font-size: 35px;" class="fa fa-twitter"></i>
+            <i style="font-size:35px" class="fa fa-instagram"></i> </p>
+      </footer>
+    </div>
 </body>
+<script src="https://use.fontawesome.com/346dfabac1.js"></script>
 </html> 
