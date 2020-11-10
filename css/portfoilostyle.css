@@ -55,6 +55,7 @@ grid-column: 1/13;
 }
 ul{
     display: block;
+    padding: 2px 2px 2px;
     margin: 0 auto;
     font-size: 25px;
 }
