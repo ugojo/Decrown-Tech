@@ -1,0 +1,122 @@
+.warpper {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12,1fr);
+    min-width: 90%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.header {
+    grid-column: 1/13;
+    background-color: black;
+    color: white;
+    
+}
+.nav {
+   grid-column: 1/13;
+}
+.acticle {
+    grid-column: 1/13;
+    background-color: rgb(124, 124, 124);
+    text-align: center;
+}
+.section {
+    grid-column:1/13 ;
+    background-color: teal;
+    justify-content: center;
+    justify-self: center;
+    
+}
+.aside {
+    grid-column: 1/13;
+    justify-content: center;
+    justify-self: center;
+    
+}
+.footer {
+grid-column: 1/13;
+}
+/*-------- Overlay nav --------*/
+.header{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+    background-color: #000000;
+    color: white;
+    opacity: .7;
+    z-index: 3;
+    padding-top: 30px;
+    overflow-x: hidden;
+    transition: 0.3s ;
+}
+ul{
+    display: block;
+    margin: 0 auto;
+    font-size: 25px;
+}
+li{
+    top: 0;
+    left: 50px;
+    padding: 20px;
+    list-style: none;
+    display: block;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+    display: block;
+    margin: 2px;
+    left: 0;
+    margin-right: 10px;
+}
+.nav-btn{
+    position: fixed;
+    font-size: 30px;
+    width: 50px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    z-index: 3;
+}
+.open-nav{
+    width: 50px;
+
+}
+.mysearch{
+    margin: 15px;
+}
+.close-nav a{
+   float: right;
+   top: 0;
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 70px;
+   display: block;
+   color: white;
+   transition: 0.8s;
+}
+/*input[type="text"]{
+    margin: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type="text"]:focus{
+   width: 30%;
+}
+/*--------- Text ------------*/
+.srctxt{
+    margin: 25px;
+}
+
+/*------- Body style--------*/
+
+/*------ Img ------------*/
