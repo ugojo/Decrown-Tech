@@ -4,41 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfoilo</title>
-    <link rel="stylesheet" href="css/portfoilostyle.css">
+    <link rel="stylesheet" href="css/portfoiloTab.css">
+    <link rel="stylesheet" href="css/humbuger-menu.css">
 </head>
 <body>
-    <div class="header" id="header">
-        <span class="close-nav" id="closeNav"> <a href="#"> &times;</a></span>
-        <p class="srctxt">SEARCH PROFOILO</p>
-        <input type="text" name="" id="mySearch" class="mysearch" onkeyup="mySearch()" autocomplete="on">
-        <ul id="myUl">
-            <li><a href="index.html"> Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li> <a href="#"> portfoilo</a></li>
-            <li> <a href="#grallery">Grallery</a>
-                <ul>
-                    <li> <a href="#"> Tab Grallery</a></li>
-                    <li><a href="#"> Slide Grallery</a></li>
-                    <li> <a href="#"> Auto slide</a></li>
-                    <li><a href="#"> Ligthbox</a></li>
-                </ul>
-            </li>
-            <li> <a href="#"> Slide</a></li>
-            <li> <a href="#"> Inputform</a></li>
-            <li> <a href="#">Clock</a></li>
-            <li><a href="#">Tab</a></li>
-        </ul>
-    </div>
-    <span class="open-nav">
-        <button class="nav-btn" id="openNav"> &#9776;</button>
-    </span>
-    <div class="acticle">
-        
-    </div>
-    <div class="section">
-
-    </div>
+  <div class="warpper" id="warpper"></div>
+  <div class="header">
+   <div class="btn-container">
+     <button class="tabLinks" id="defultOpen" onclick="myTab('accordrian' ,this,'red')"> Accordian</button>
+     <button class="tabLinks" onclick="myTab('grallery',this, 'greenyellow')"> Grallery</button>
+     <button class="tabLinks" onclick="myTab('slide' ,this, 'green')"> Slide</button>
+     <button class="tabLinks" onclick="myTab('tabGrallery' ,this , 'blue')"> Tab Grallery</button>
+     <button class="tabLinks" onclick="myTab('loginForm' ,this,' dodgerblue')">Login From </button>
+     <button class="tabLinks" onclick="myTab('imageZoom' ,this, 'yellow')"> Image Zoom</button>
+     <button class="tabLinks" onclick="myTab('responsiveMenu' ,this, ' indianred')"> Responsive Memu</button>
+     <button class="tabLinks" onclick="myTab('lightbox' ,this,'black')"> Responsive Memu</button>
+     <button class="tabLinks" onclick="myTab('icon' ,this, 'black')"> Responsive Memu</button>
+     <button class="tabLinks" onclick="myTab('fullWidthNav' ,this,'white')"> Responsive Memu</button>
+   </div>
+  </div>
+   <div class="nav">
+     <div id="accordrian"  class="tabcontent" > Lorem ipsum dolor sit amet1.</div>
+     <div id="grallery" class="tabcontent"> Lorem ipsum dolor sit amet2.</div>
+     <div id="slide" class="tabcontent">Lorem ipsum dolor sit amet3.</div>
+     <div id="tabGrallery" class="tabcontent">Lorem ipsum dolor sit amet4.</div>
+     <div id="loginForm" class="tabcontent"> Lorem ipsum dolor sit amet5.</div>
+     <div id="imageZoom" class="tabcontent"> Lorem ipsum dolor sit ame6t.</div>
+     <div id="responsiveMenu" class="tabcontent"> Lorem ipsum dolor sit amet7.</div>
+     <div id="lightbox" class="tabcontent"> Lorem ipsum dolor sit 8.</div>
+     <div id="icon" class="tabcontent"> Lorem ipsum dolor sit amet9.</div>
+     <div id="fullWidthNav" class="tabcontent"> Lorem ipsum dolor sit amet10.</div>
+     </div>
+  </div>
 </body>
-<script src="js/portfoiloscript.js"></script>
+ <script src="js/portfoilosTabScript.js"></script>
 </html>

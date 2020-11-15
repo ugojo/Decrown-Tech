@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tech-Hub</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/humbuger-menu.css">
+    <link rel="stylesheet" href="css/portfoilostyle.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
@@ -15,15 +15,41 @@
             <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
       </div>
       <header class="header">
-        <a href="#" class="logo"> DCT </a>
-        <input class="menu-btn" type="checkbox" id="menu-btn">
-        <label class="menu-icon" for="menu-btn"> <span class="nav-icon"></span></label>
-        <ul class="menu">
-          <li> <a href="#"> Home </a></li>
-          <li> <a href="#"> About </a></li>
-          <li> <a href="#"> Contact </a></li>
-          <li> <a href="#"> Login </a></li>
-        </ul>
+        <div class="header" id="header">
+          <span class="close-nav" id="closeNav"> <a href="#"> &times;</a></span>
+          <p class="srctxt">SEARCH PROFOILO</p>
+          <div class="icon">
+          <input type="text" name="" id="mySearch" class="mysearch" onkeyup="mySearch()"  autocomplete="on">
+          <i class="fa fa-search"></i>
+          </div>
+          <ul id="myUl">
+              <li><a href="index.html"> Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li> <a href="#"> portfoilo</a></li>
+              <li> <a href="#grallery">Gallery</a>
+                  <ul>
+                      <li> <a href="#"> Tab Gallery</a></li>
+                      <li><a href="#"> Slide Gallery</a></li>
+                      <li> <a href="#"> Auto slide</a></li>
+                      <li><a href="#"> Ligthbox</a></li>
+                  </ul>
+              </li>
+              <li> <a href="#"> Slide</a></li>
+              <li> <a href="#"> Inputform</a></li>
+              <li> <a href="#">Clock</a></li>
+              <li><a href="#">Tab</a></li>
+          </ul>
+      </div>
+      <span class="open-nav">
+          <button class="nav-btn" id="openNav"> &#9776;</button>
+      </span>
+      <div class="acticle">
+          
+      </div>
+      <div class="section">
+  
+      </div>
      </header>
       <div class="nav">
         <div class="background">
@@ -82,7 +108,7 @@
         </div>
       </div>
       <footer class="footer">
-           <h3> Contact Me</h3> <hr>
+           <h3 href="#id"> Contact Me</h3> <hr>
         <div class="contacttext">
            <p> <i class="fa fa-address-card" aria-hidden="true"></i>Address : Lagos Nigeria </p>
            <p> <i class="fa fa-phone"></i>Phone : 07085797828 </p>
@@ -95,4 +121,5 @@
     </div>
 </body>
 <script src="https://use.fontawesome.com/346dfabac1.js"></script>
+<script src="js/portfoiloscript.js"></script>
 </html> 
