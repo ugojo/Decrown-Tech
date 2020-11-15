@@ -119,6 +119,7 @@ ul li:hover ul li{
 .fa-search{
     background-color: dodgerblue;
     color: white;
+    font-size: small;
     border-radius: 0 3px 3px 0;
 }
 .mysearch{
