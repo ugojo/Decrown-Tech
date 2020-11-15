@@ -26,10 +26,12 @@ function mySearch() {
         txtVaule = a.textContent || a.innerText;
         if (txtVaule.toUpperCase().indexOf(filter) > -1) {
              li[i].style.display = "" ;
+             li[i].style.color = "dodgerblue";
         } else {
             li[i].style.display = "none";
         }
         
     }
 }
+
 

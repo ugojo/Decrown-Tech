@@ -1,0 +1,50 @@
+* {box-sizing: border-box}
+.btn-container{
+    float: left;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+.tabLinks{
+   display: block;
+   background-color: #555;
+   width: 100px;
+   top: 0;
+   left: 0;
+   padding: 20px;
+   border: none;
+   outline: none;
+}
+.tabcontent{
+    display: none;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-left: none;   
+}
+
+#accordrian{ background-color: red;}
+#grallery{ background-color:greenyellow;}
+#slide {background-color:green;}
+#tabGrallery{background-color: blue;}
+#loginForm{background-color: dodgerblue;}
+#imageZoom{ background-color: yellow;}
+#responsiveMenu{ background-color: indianred;}
+#lightbox{background-color: black; color: white;}
+.warpper {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12,1fr);
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.header {
+    grid-column: 1/3;
+    
+    
+}
+.nav {
+    grid-column: 3/13;
+}
