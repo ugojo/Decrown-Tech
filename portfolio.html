@@ -4,38 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfoilo</title>
+    <link rel="stylesheet" href="css/portfoilosmaintyle.css">
     <link rel="stylesheet" href="css/portfoiloTab.css">
-    <link rel="stylesheet" href="css/humbuger-menu.css">
 </head>
 <body>
-  <div class="warpper" id="warpper"></div>
-  <div class="header">
-   <div class="btn-container">
-     <button class="tabLinks" id="defultOpen" onclick="myTab('accordrian' ,this,'red')"> Accordian</button>
-     <button class="tabLinks" onclick="myTab('grallery',this, 'greenyellow')"> Grallery</button>
-     <button class="tabLinks" onclick="myTab('slide' ,this, 'green')"> Slide</button>
-     <button class="tabLinks" onclick="myTab('tabGrallery' ,this , 'blue')"> Tab Grallery</button>
-     <button class="tabLinks" onclick="myTab('loginForm' ,this,' dodgerblue')">Login From </button>
-     <button class="tabLinks" onclick="myTab('imageZoom' ,this, 'yellow')"> Image Zoom</button>
-     <button class="tabLinks" onclick="myTab('responsiveMenu' ,this, ' indianred')"> Responsive Memu</button>
-     <button class="tabLinks" onclick="myTab('lightbox' ,this,'black')"> Responsive Memu</button>
-     <button class="tabLinks" onclick="myTab('icon' ,this, 'black')"> Responsive Memu</button>
-     <button class="tabLinks" onclick="myTab('fullWidthNav' ,this,'white')"> Responsive Memu</button>
-   </div>
-  </div>
-   <div class="nav">
-     <div id="accordrian"  class="tabcontent" > Lorem ipsum dolor sit amet1.</div>
-     <div id="grallery" class="tabcontent"> Lorem ipsum dolor sit amet2.</div>
-     <div id="slide" class="tabcontent">Lorem ipsum dolor sit amet3.</div>
-     <div id="tabGrallery" class="tabcontent">Lorem ipsum dolor sit amet4.</div>
-     <div id="loginForm" class="tabcontent"> Lorem ipsum dolor sit amet5.</div>
-     <div id="imageZoom" class="tabcontent"> Lorem ipsum dolor sit ame6t.</div>
-     <div id="responsiveMenu" class="tabcontent"> Lorem ipsum dolor sit amet7.</div>
-     <div id="lightbox" class="tabcontent"> Lorem ipsum dolor sit 8.</div>
-     <div id="icon" class="tabcontent"> Lorem ipsum dolor sit amet9.</div>
-     <div id="fullWidthNav" class="tabcontent"> Lorem ipsum dolor sit amet10.</div>
-     </div>
-  </div>
+  <div class="main">
+
+    <h1>MYLOGO.COM</h1>
+    <hr>
+    
+    <h2>PORTFOLIO</h2>
+    <p> This portfoilo is made with Html Css and javascritp</p>
+    
+    <!-- Portfolio  Grid -->
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <div class="btn-container">
+            <button class="tabLinks" id="defultOpen" onclick="myTab('page_1' ,this,'red')"> page_1</button>
+            <button class="tabLinks" onclick="myTab('page_2',this, 'greenyellow')"> page_2</button>
+            <button class="tabLinks" onclick="myTab('page_3' ,this, 'green')"> page_3</button>
+            <button class="tabLinks" onclick="myTab('page_4' ,this , 'blue')"> page_4</button>
+          </div>
+            <div id="page_1"  class="tabcontent" > This is page One.</div>
+            <div id="page_2" class="tabcontent"> This is page Two.</div>
+            <div id="page_3" class="tabcontent"> This is page Three.</div>
+            <div id="page_4" class="tabcontent"> This is page Four</div>
+          <h3> Tab</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content slideOne">
+          <div class="slideContainer">
+            <div class="slideContent fadeout">
+              <img src="../Decrown-Tech/img/img_snow.jpg" alt="">
+              <div class="slideNum">1/3</div>
+              <div class="caption"> Caption </div>
+            </div>
+            <div class="slideContent fadeout">
+              <img src="../Decrown-Tech/img/img_nature.jpg" alt="">
+              <div class="slideNum">2/3</div>
+              <div class="caption"> Caption </div>
+            </div>
+            <div class="slideContent fadeout">
+              <img src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+              <div class="slideNum">3/3</div>
+              <div class="caption"> Caption </div>
+            </div>
+            <a onclick="slideCon(-1)" class="prev">&#10094;</a>
+            <a onclick="slideCon(1)" class="next">&#10095;</a>
+          </div>
+           <div class="dotalign">
+          <span onclick="currentSlide(1)" class="dot"></span>
+          <span onclick="currentSlide(2)" class="dot"></span>
+          <span onclick="currentSlide(3)" class="dot"></span>
+           </div>
+           <h3> Image Slide</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+         <div class="autoSlideContainer" id="autoSlideContainer">
+           <div class="autoSlide">
+             <img src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+              <div class="autoSlideNum">1/3</div>
+              <div class="autoslidetext"> Mountains</div>
+           </div>
+           <div class="autoSlide">
+            <img src="../Decrown-Tech/img/img_snow.jpg" alt="">
+             <div class="autoSlideNum">2/3</div>
+             <div class="autoslidetext"> Snow</div>
+          </div>
+          <div class="autoSlide">
+            <img src="../Decrown-Tech/img/img_nature.jpg" alt="">
+             <div class="autoSlideNum">3/3</div>
+             <div class="autoslidetext"> Nature</div>
+          </div>
+          <span  class="autodot"></span>
+          <span  class="autodot"></span>
+          <span  class="autodot"></span>
+         </div>
+         <h3> Auto Slide</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="mountains.jpg" alt="Mountains" style="width:100%">
+          <h3>My Work</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <img src="bear.jpg" alt="Bear" style="width:100%">
+      <h3>Some Other Work</h3>
+      <p>Lorem ipsum..</p>
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
 </body>
- <script src="js/portfoilosTabScript.js"></script>
+<script src="js/portfoilosTabScript.js"></script>
 </html>
