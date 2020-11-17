@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/portfoilosmaintyle.css">
     <link rel="stylesheet" href="css/portfoiloTab.css">
     <link rel="stylesheet" href="css/tabGallery.css">
+    <link rel="stylesheet" href="css/mystyle.css">
 </head>
 <body>
   <div class="main">
 
-    <h1>MYLOGO.COM</h1>
+    <h1>MYPORTFOLIO</h1>
     <hr>
     
     <h2>PORTFOLIO</h2>
@@ -27,16 +28,17 @@
             <button class="tabLinks" onclick="myTab('page_3' ,this, 'green')"> page_3</button>
             <button class="tabLinks" onclick="myTab('page_4' ,this , 'blue')"> page_4</button>
           </div>
-            <div id="page_1"  class="tabcontent" > This is page One.</div>
-            <div id="page_2" class="tabcontent"> This is page Two.</div>
-            <div id="page_3" class="tabcontent"> This is page Three.</div>
-            <div id="page_4" class="tabcontent"> This is page Four</div>
-          <h3> Tab</h3>
-          <p>Lorem ipsum..</p>
+          <div id="page_1"  class="tabcontent" > This is page One.</div>
+          <div id="page_2" class="tabcontent"> This is page Two.</div>
+          <div id="page_3" class="tabcontent"> This is page Three.</div>
+          <div id="page_4" class="tabcontent"> This is page Four</div>
+        <h3> Tab</h3>
+        <p>Lorem ipsum..</p>
+        <!---END TAB-->
         </div>
       </div>
       <div class="column">
-        <div class="content slideOne">
+        <div class="content">
           <div class="slideContainer">
             <div class="slideContent fadeout">
               <img src="../Decrown-Tech/img/img_snow.jpg" alt="">
@@ -55,137 +57,163 @@
             </div>
             <a onclick="slideCon(-1)" class="prev">&#10094;</a>
             <a onclick="slideCon(1)" class="next">&#10095;</a>
+            <!-- END OF SLIDECONTAINER-->
           </div>
            <div class="dotalign">
           <span onclick="currentSlide(1)" class="dot"></span>
           <span onclick="currentSlide(2)" class="dot"></span>
           <span onclick="currentSlide(3)" class="dot"></span>
+          <!--END OF DOTALIGN-->
            </div>
            <h3> Image Slide</h3>
           <p>Lorem ipsum..</p>
+          
         </div>
       </div>
-      <div class="column">
+      <div class="column full">
         <div class="content">
-         <div class="autoSlideContainer" id="autoSlideContainer">
+          <div class="autoSlideContainer" id="autoSlideContainer">
+            <div class="autoSlide">
+              <img src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+               <div class="autoSlideNum">1/3</div>
+               <div class="autoslidetext"> Mountains</div>
+            </div>
+            <div class="autoSlide">
+             <img src="../Decrown-Tech/img/img_snow.jpg" alt="">
+              <div class="autoSlideNum">2/3</div>
+              <div class="autoslidetext"> Snow</div>
+            </div>
            <div class="autoSlide">
-             <img src="../Decrown-Tech/img/img_mountains.jpg" alt="">
-              <div class="autoSlideNum">1/3</div>
-              <div class="autoslidetext"> Mountains</div>
+             <img src="../Decrown-Tech/img/img_nature.jpg" alt="">
+              <div class="autoSlideNum">3/3</div>
+              <div class="autoslidetext"> Nature</div>
            </div>
-           <div class="autoSlide">
-            <img src="../Decrown-Tech/img/img_snow.jpg" alt="">
-             <div class="autoSlideNum">2/3</div>
-             <div class="autoslidetext"> Snow</div>
-          </div>
-          <div class="autoSlide">
-            <img src="../Decrown-Tech/img/img_nature.jpg" alt="">
-             <div class="autoSlideNum">3/3</div>
-             <div class="autoslidetext"> Nature</div>
+           <!---END OF AUTOSLIDECONTAINER-->
           </div>
           <span  class="autodot"></span>
           <span  class="autodot"></span>
           <span  class="autodot"></span>
-         </div>
-         <h3> Auto Slide</h3>
-          <p>Lorem ipsum..</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-           <div class="rows">
-             <div class="col">
-               <img onclick="openModal();currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="">
-             </div>
-             <div class="col">
-              <img onclick="openModal();currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="">
-            </div>
-            <div class="col">
-              <img onclick="openModal();currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="">
-            </div>
-            <div class="col">
-              <img onclick="openModal();currentSlide(4)" src="../Decrown-Tech/img/img_nature.jpg" alt="">
-            </div>
-          </div>
-          <div class="myModal scale" id="myModal">
-            <span onclick="closeModal()" id="closeModal" class="close">&times;</span>
-            <div class="modalContent">
-              <div class="mySlide">
-                <img   class="imgs" src="../Decrown-Tech/img/img_lights_wide.jpg" alt="">
-                <div class="imgNum">1/4</div>
-             </div>
-            <div class="mySlide">
-              <img  class="imgs" src="../Decrown-Tech/img/img_5terre_wide.jpg" alt="">
-              <div class="imgNum">2/4</div>
-            </div>
-            <div class="mySlide">
-             <img class="imgs" src="../Decrown-Tech/img/img_mountains_wide.jpg" alt="">
-             <div class="imgNum">3/4</div>
-           </div>
-          <div class="mySlide">
-           <img  class="imgs" src="../Decrown-Tech/img/img_nature_wide.jpg" alt="">
-            <div class="imgNum">4/4</div>
-         </div>
-         <a onclick="modalCon(-1)" class="pervModal">&#10094;</a>
-         <a onclick="modalCon(1)" class="nextModal">&#10095;</a>
-         <div class="myCaption">
-            <p> </p>
-        </div>
-         <div class="row">
-         <div class="col">
-          <img class="modaldot" onclick="currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="lights">
-        </div>
-        <div class="col">
-         <img class="modaldot" onclick="currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="5terre">
-       </div>
-       <div class="col">
-         <img class="modaldot" onclick="currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="mountains">
-       </div>
-       <div class="col">
-         <img class="modaldot" onclick="currentSlide(4)"src="../Decrown-Tech/img/img_nature.jpg" alt="nature">
-      </div>
-      </div>
-        </div>
-        </div>
-        <h3>My Work</h3>
-          <p>Lorem ipsum..</p>
-      </div>
-    </div>
-    <div class="column">
-       <div class="content">
-         <button class="accordion"> Section 1 </button>
-       <div class="panel" id="panel">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
-       </div>
-       <button class="accordion"> Section 2 </button>
-        <div class="panel" id="panel">
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
-       </div>
-      <button class="accordion"> Section 3 </button>
-       <div class="panel" id="panel">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
-      </div>
-      <button class="accordion"> Section 4 </button>
-      <div class="panel" id="panel">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
-      </div>
-     </div>
-    </div>
-    <div class="column">
-      <div class="content">
-      </div>
-     </div>
-     <div class="column">
-      <div class="content">
-      </div>
-     </div>
 
+          <h3> Auto Slide</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <!--- END ROW-->
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <button class="accordion"> Section 1 </button>
+            <div class="panel" id="panel">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+            </div>
+          <button class="accordion"> Section 2 </button>
+             <div class="panel" id="panel">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+            </div>
+          <button class="accordion"> Section 3 </button>
+           <div class="panel" id="panel">
+             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+           </div>
+          <button class="accordion"> Section 4 </button>
+            <div class="panel" id="panel">
+             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+            </div>
+            <!--END OF ACCORDION-->
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="modalrows">
+            <div class="col">
+              <img class="imgHover" onclick="openModal();currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="">
+            </div>
+            <div class="col">
+             <img  class="imgHover" onclick="openModal();currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="">
+           </div>
+           <div class="col">
+             <img   class="imgHover" onclick="openModal();currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+           </div>
+           <div class="col">
+             <img   class="imgHover" onclick="openModal();currentSlide(4)" src="../Decrown-Tech/img/img_nature.jpg" alt="">
+           </div>
+         </div>
+         <div class="myModal scale" id="myModal">
+           <span onclick="closeModal()" id="closeModal" class="close">&times;</span>
+           <div class="modalContent">
+             <div class="mySlide">
+               <img   class="imgs" src="../Decrown-Tech/img/img_lights_wide.jpg" alt="">
+               <div class="imgNum">1/4</div>
+            </div>
+           <div class="mySlide">
+             <img  class="imgs" src="../Decrown-Tech/img/img_5terre_wide.jpg" alt="">
+             <div class="imgNum">2/4</div>
+           </div>
+           <div class="mySlide">
+            <img class="imgs" src="../Decrown-Tech/img/img_mountains_wide.jpg" alt="">
+            <div class="imgNum">3/4</div>
+          </div>
+         <div class="mySlide">
+          <img  class="imgs" src="../Decrown-Tech/img/img_nature_wide.jpg" alt="">
+           <div class="imgNum">4/4</div>
+        </div>
+        <a onclick="modalCon(-1)" class="pervModal">&#10094;</a>
+        <a onclick="modalCon(1)" class="nextModal">&#10095;</a>
+        <div class="modalCaption">
+           <p> </p>
+       </div>
+        <div class="modalrows">
+        <div class="col">
+         <img class="modaldot" onclick="currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="lights">
+       </div>
+       <div class="col">
+        <img class="modaldot" onclick="currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="5terre">
+      </div>
+      <div class="col">
+        <img class="modaldot" onclick="currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="mountains">
+      </div>
+      <div class="col">
+        <img class="modaldot" onclick="currentSlide(4)"src="../Decrown-Tech/img/img_nature.jpg" alt="nature">
+     </div>
+     </div>
+    </div>
+    </div>
+       <h3> Overlay</h3>
+         <p>Lorem ipsum..</p>     
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="selection">
+            <button onclick="filterDiv('all')" class="all">All</button> 
+           <button onclick="filterDiv('furits')" class="furits">Furits</button>
+            <button onclick="filterDiv('colors')" class="colors">Colors</button> 
+            <button onclick="filterDiv('cars')" class="cars"> Cars</button>
+            <button class="animals"> Animals</button>
+            <div class="filterDiv animals"> Cat</div>
+            <div class="filterDiv animals cars colors"> Kiwi</div>
+            <div class="filterDiv furits colors"> Orange</div>   
+            <div class="filterDiv animals"> Hen</div>
+            <div class="filterDiv animals"> Horse</div>
+            <div class="filterDiv furits"> pinapple</div>
+            <div class="filterDiv cars"> Toyota</div>
+            <div class="filterDiv furits"> Golden Menlod</div>
+            <div class="filterDiv animals"> Bear</div>
+            <div class="filterDiv colors">Pink </div>
+            <div class="filterDiv animals"> Dog </div>
+            <div class="filterDiv cars"> Benz </div>
+            <div class="filterDiv cars"> Hunder </div>
+            <div class="filterDiv cars"> BMW </div>
+        </div>
+        </div>
+      </div>
+       <!--- END ROW-->
+    </div>
     <div class="content">
       <img src="bear.jpg" alt="Bear" style="width:100%">
       <h3>Some Other Work</h3>
       <p>Lorem ipsum..</p>
     </div>
-    
     <!-- END MAIN -->
     </div>
 </body>

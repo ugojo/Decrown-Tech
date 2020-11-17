@@ -1,4 +1,4 @@
-.rows {
+.modalrows {
     padding: 10px;
 }
 .col{
@@ -21,7 +21,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 1200px;
     overflow: auto;
     background-color: #000000;
     color: #fefefe;
@@ -43,6 +42,9 @@
 }
 .imgs{
     border: 1px solid wheat;
+}
+.imgHover{
+    box-shadow: 0 4px 8px 0 rgba(0,0 , 0, 0.6);
 }
 .close{
     position: absolute;
@@ -66,7 +68,7 @@
 }
 .pervModal ,.nextModal{
     position: absolute;
-    top: 45%;
+    top: 50%;
     margin-top: -50px;
     cursor: pointer;
     width: auto;
@@ -89,11 +91,11 @@
     top: 2px;
     left: 3px;
 }
-.myCaption{
-    width: 100%;
+.modalCaption{
     text-align: center;
+    padding: 2px;
     background-color: black;
-    color: blanchedalmond;
+    color: white;
 }
 .scale{
     -webkit-animation-name: scale;
@@ -101,18 +103,17 @@
 }
 @-webkit-keyframes scale {
     from{ scale: 0;}
-    to{ scale: 2;}
+    to{ scale: ;}
 }
 @keyframes scale {
     from{ scale: 0;}
-    to{ scale: 2;}
+    to{ scale: 1;}
 }
 @media screen and (min-width:992px){
     .myModal{
        max-width: 50%;
-       bottom: 0;
+       top: 0;
        right: 0;
-       height: 100%;
        overflow: auto;
     }
     .mySlide{

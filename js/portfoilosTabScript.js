@@ -106,3 +106,18 @@ for ( i = 0; i < btn.length; i++) {
         }
     })
 }
+/* FILTER */
+filterDiv("all");
+function filterDiv(n) {
+    var div ;
+    div = document.getElementsByClassName("filterDiv");
+
+    if (n == 'all') {
+        n = " ";
+    }
+    for ( i = 0; i < div.length; i++) {
+        if ( div[i].className.indexOf(n)) {
+          
+        }
+    }
+}

@@ -179,9 +179,11 @@
     display: block;
     font-size: 15px;
     float: right;
+    color: wheat;
     transition: .3s ;
 }
 .activeAcc::after{
     content: "\02796";
+    color: black;
     transition: .3s ;
 }

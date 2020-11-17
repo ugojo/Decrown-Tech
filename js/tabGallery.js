@@ -16,8 +16,8 @@ function currentSlide(s) {
     modalSlide(slide = s); 
 }
 function  modalSlide(s) {
-    var mySlides,i , dots , caption;
-    caption = document.getElementsByClassName("myCaption");
+    var mySlides,i , dots , captionText;
+    captionText = document.getElementsByClassName("modalCaption")[0];
     mySlides = document.getElementsByClassName("mySlide");
     for (i = 0; i < mySlides.length; i++) {
        mySlides[i].style.display = "none";
@@ -35,5 +35,5 @@ function  modalSlide(s) {
     }
     mySlides[slide - 1].style.display = "block";
     dots[slide - 1].className += " activeModal";
-    caption = dots[slide -1].innerHTML = dots.alt ;
+    captionText.innerHTML = dots[slide -1].alt ;
 }

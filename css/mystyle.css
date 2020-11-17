@@ -1,0 +1,11 @@
+.filterDiv{
+    display: none;
+    padding: 5px;
+    border: 1px solid red;
+}
+.filterDiv:nth-child(even){
+    background-color: rgb(155, 137, 113);
+}
+.show{
+    display: block;
+}
