@@ -6,6 +6,7 @@
     <title>portfoilo</title>
     <link rel="stylesheet" href="css/portfoilosmaintyle.css">
     <link rel="stylesheet" href="css/portfoiloTab.css">
+    <link rel="stylesheet" href="css/tabGallery.css">
 </head>
 <body>
   <div class="main">
@@ -92,13 +93,93 @@
       </div>
       <div class="column">
         <div class="content">
-          <img src="mountains.jpg" alt="Mountains" style="width:100%">
-          <h3>My Work</h3>
-          <p>Lorem ipsum..</p>
+           <div class="rows">
+             <div class="col">
+               <img onclick="openModal();currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="">
+             </div>
+             <div class="col">
+              <img onclick="openModal();currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="">
+            </div>
+            <div class="col">
+              <img onclick="openModal();currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+            </div>
+            <div class="col">
+              <img onclick="openModal();currentSlide(4)" src="../Decrown-Tech/img/img_nature.jpg" alt="">
+            </div>
+          </div>
+          <div class="myModal scale" id="myModal">
+            <span onclick="closeModal()" id="closeModal" class="close">&times;</span>
+            <div class="modalContent">
+              <div class="mySlide">
+                <img src="../Decrown-Tech/img/img_lights_wide.jpg" alt="">
+                <div class="imgNum">1/4</div>
+             </div>
+            <div class="mySlide">
+              <img src="../Decrown-Tech/img/img_5terre_wide.jpg" alt="">
+              <div class="imgNum">2/4</div>
+            </div>
+            <div class="mySlide">
+             <img src="../Decrown-Tech/img/img_mountains_wide.jpg" alt="">
+             <div class="imgNum">3/4</div>
+           </div>
+          <div class="mySlide">
+           <img src="../Decrown-Tech/img/img_nature_wide.jpg" alt="">
+            <div class="imgNum">4/4</div>
+         </div>
+         <a onclick="modalCon(-1)" class="pervModal">&#10094;</a>
+         <a onclick="modalCon(1)" class="nextModal">&#10095;</a>
+         <div class="myCaption">
+            <p> </p>
         </div>
+         <div class="row">
+         <div class="col">
+          <img class="modaldot" onclick="currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="lights">
+        </div>
+        <div class="col">
+         <img class="modaldot" onclick="currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="5terre">
+       </div>
+       <div class="col">
+         <img class="modaldot" onclick="currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="mountains">
+       </div>
+       <div class="col">
+         <img class="modaldot" onclick="currentSlide(4)"src="../Decrown-Tech/img/img_nature.jpg" alt="nature">
+      </div>
+      </div>
+        </div>
+        </div>
+        <h3>My Work</h3>
+          <p>Lorem ipsum..</p>
       </div>
     </div>
-    
+    <div class="column">
+       <div class="content">
+         <button class="accordion"> Section 1 </button>
+       <div class="panel" id="panel">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+       </div>
+       <button class="accordion"> Section 2 </button>
+        <div class="panel" id="panel">
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+       </div>
+      <button class="accordion"> Section 3 </button>
+       <div class="panel" id="panel">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+      </div>
+      <button class="accordion"> Section 4 </button>
+      <div class="panel" id="panel">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
+      </div>
+     </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      </div>
+     </div>
+     <div class="column">
+      <div class="content">
+      </div>
+     </div>
+
     <div class="content">
       <img src="bear.jpg" alt="Bear" style="width:100%">
       <h3>Some Other Work</h3>
@@ -109,4 +190,5 @@
     </div>
 </body>
 <script src="js/portfoilosTabScript.js"></script>
+<script src="js/tabGallery.js"></script>
 </html>

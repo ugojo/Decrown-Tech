@@ -1,0 +1,132 @@
+.rows {
+    padding: 5px;
+}
+.col{
+    float: left;
+    width: 25%;
+    padding: 2px;
+    cursor: pointer;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.myModal{
+    display: none;
+    position: fixed;
+    margin: 15% auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    background-color: #000000;
+    color: #fefefe;
+    cursor: pointer;
+}
+.modalContent {
+    width: 100%;
+    position: relative;
+    width: 90%;
+    margin: 10% auto;
+    top: 0;
+    left: 0;
+}
+.mySlide{
+    width: 100%;
+    margin: 2px auto;
+   
+}
+.close{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+.mySlide img{
+    width: 100%;
+}
+.modaldot{
+    display: inline-block;
+   top: 5px;
+   opacity: .5;
+}
+.activeModal {
+    opacity: 5;
+}
+.pervModal ,.nextModal{
+    position: absolute;
+    font-size: 25px;
+    bottom: 150px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.pervModal:hover , .nextModal:hover{
+    background-color: goldenrod;
+}
+.nextModal{
+    right: 0;
+}
+.imgNum{
+    position: absolute;
+    top: 2px;
+    left: 3px;
+}
+.myCaption{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: blanchedalmond;
+}
+.scale{
+    -webkit-animation-name: scale;
+    animation-name: scale;
+}
+@-webkit-keyframes scale {
+    from{ scale: 0;}
+    to{ scale: 2;}
+}
+@keyframes scale {
+    from{ scale: 0;}
+    to{ scale: 2;}
+}
+@media screen and (min-width:992px){
+    .myModal{
+       max-width: 50%;
+       bottom: 0;
+       right: 0;
+       height: 100%;
+       overflow: auto;
+    }
+    .mySlide{
+        width: 90%;
+        padding-bottom: 20px;
+    }
+    .imgNum{
+        position: absolute;
+        top: 15px;
+        left: 30px;
+    }
+
+}
+@media screen and (min-width:504px){
+    .pervModal ,.nextModal{
+        bottom: 200px;
+    }
+}
+@media screen and (min-width:803px){
+    .pervModal ,.nextModal{
+        bottom: 250px;
+    }
+}
+@media screen and (min-width:992px){
+    .pervModal ,.nextModal{
+        bottom: 200px;
+    }
+}
