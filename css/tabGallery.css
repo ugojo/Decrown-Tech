@@ -36,6 +36,7 @@
 .mySlide{
     width: 100%;
     margin: 2px auto;
+    border: 1px solid wheat;
    
 }
 .close{
