@@ -1,5 +1,5 @@
 .rows {
-    padding: 5px;
+    padding: 10px;
 }
 .col{
     float: left;
@@ -15,23 +15,26 @@
 .myModal{
     display: none;
     position: fixed;
-    margin: 15% auto;
+    z-index: 1;
+    padding-top: 100px;
+    margin: auto;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
     overflow: auto;
     background-color: #000000;
     color: #fefefe;
     cursor: pointer;
+    user-select: none;
 }
 .modalContent {
     width: 100%;
     position: relative;
-    width: 90%;
-    margin: 10% auto;
+    margin: auto;
     top: 0;
     left: 0;
+    width: 90%;
 }
 .mySlide{
     width: 100%;
@@ -63,9 +66,11 @@
 }
 .pervModal ,.nextModal{
     position: absolute;
-    font-size: 25px;
-    bottom: 150px;
+    top: 45%;
+    margin-top: -50px;
     cursor: pointer;
+    width: auto;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -73,8 +78,11 @@
 .pervModal:hover , .nextModal:hover{
     background-color: goldenrod;
 }
+.pervModal {
+    left: 3px;
+}
 .nextModal{
-    right: 0;
+    right: 3px;
 }
 .imgNum{
     position: absolute;
@@ -119,17 +127,11 @@
 
 }
 @media screen and (min-width:504px){
-    .pervModal ,.nextModal{
-        bottom: 200px;
-    }
+   
 }
 @media screen and (min-width:803px){
-    .pervModal ,.nextModal{
-        bottom: 250px;
-    }
+    
 }
 @media screen and (min-width:992px){
-    .pervModal ,.nextModal{
-        bottom: 200px;
-    }
+    
 }

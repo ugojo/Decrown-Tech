@@ -72,8 +72,9 @@
 }
 .prev , .next{
     position: absolute;
-    font-size: 38px;
-    bottom: 150px;
+    font-size: 30px;
+    top: 150px;
+    margin-top: -50px;
     cursor: pointer;
     text-decoration: none;
     border-radius: 0 3px 3px 0;
@@ -83,28 +84,26 @@
     background-color: goldenrod;
 }
 .prev{
-    left: 0;
+    left: 5px;
 }
 .next{
-    right: 0;
+    right: 5px;
 }
 .fadeout{
     -webkit-animation-name: fade;
      animation-name: fade;
 }
 /* Responsive */
-@media screen and (max-width: 484px) {
-    .prev , .next{
-        bottom: 100px;
-        
+@media screen and (min-width: 484px) {
+    .prev , .next {
+        top: 230px;
     }
-  }
-@media screen and (min-width: 791px) {
-    .prev , .next{
-        font-size: 30px;
-        bottom: 100px;
+}
+@media screen and (min-width: 800px) {
+    .prev , .next {
+        top: 150px;
     }
-  }
+    }
   @-webkit-keyframes fade {
       from{opacity: .4}
       to {opacity: 1}
