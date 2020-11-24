@@ -228,17 +228,17 @@ a {
 
           if (!x[i].value.match(pass)) {
             x[i].className += " invalid";
-            document.getElementsByClassName("msg").innerHTML = "Password word must contain lowerCase Charaters";
+            document.getElementsByClassName("msg").innerHTML = "Password word must contain <strong> lowerCase </strong> charaters";
             valid = false ;
           }else if (!x[i].value.match(passOne)) {
 
             x[i].className += " invalid";
-            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain Uppercase Charaters";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain <strong>  Uppercase </strong> charaters";
             valid = false ;
           }else if (!x[i].value.match(passTh)) {
             
             x[i].className += " invalid";
-            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain Number Charaters";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain <strong> Number <strong> ";
             valid = false ;
           }else if ( x[i].value.length <= 8) {
             
