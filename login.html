@@ -3,54 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decrow-Tech.login</title>
-    <link rel="stylesheet" href="css/logstyle.css">
+    <title> Multi-Sept-form</title>
 </head>
+<style>
+    *{ box-sizing: border-box;}
+    body{
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #ebdcdc;
+    }
+.from-container{
+       position: relative;
+       width: 80%;
+       height: 550px;
+       margin: 0 auto;
+       padding: 20px;
+       background-color:  #ffffff;
+       border: 1px solid rgb(160, 160, 160);
+}
+.tab{ display: none;}
+.container {
+  padding: 16px;
+}
+
+input{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid black;
+  background: #f1f1f1;
+  padding-bottom: 20px ;
+}
+
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 0px;
+  margin: 8px 0;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+}
+label{
+    text-align: left;
+    margin-left: 5px;
+}
+.registerbtn:hover {
+  opacity:1;
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid green;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.steps{
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    display:inline-block;
+    border: 1px solid black ;
+    background-color: rgb(136, 123, 123);
+    cursor: pointer;
+    padding: 2px;
+    opacity: 0.5;
+}
+.myBtn{
+    text-align: right;
+}
+.formsteps{
+    width: 100%;
+    text-align: center;
+}
+.invalid{
+  background-color: rgb(241, 170, 170);
+  color: black;
+  border: 1px solid black;
+}
+.active{
+  opacity: 1;
+}
+.finish{
+  background-color: green;
+}
+.msg{
+  display: block;
+  color: red;
+  font-weight: bold;
+}
+@media  screen and  (max-width: 800px ) {
+        .myBtn{
+            text-align: center;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .msg{
+          text-align: center;
+        }
+    }
+
+</style>
 <body>
-    <div id="logWarpper">
-      
-        <section>
-            <div id="main"></div>
-            <form action="https://ugojo.github.io/Decrown-Tech/" id="login">
-             <label class="form middle"> login </lable> <br>
-             <label  for="username"> Username</lable> <br>
-             <input id="username"  type="text" name="username" placeholder="Enter username"  required> <br>
-             <label for="pwd"> Password</label> <br>
-             <input type="password" name="pwd" id="pwd" required  placeholder="password"> <br>
-             <input type="checkbox" name="showpwd" id="showpwd" >
-             <label for="showpwd">show password </label> <br>
-             <label for="con-pwd">confirm password </label> <br>
-             <input type="password" name="con-pwd" id="con-pwd" placeholder="confirm password"  required> <br>
-             <label for="Email"> Email</label> <br>
-             <input type="email" name="email" id="mail" placeholder="Email enter here" required> <br>
-             <label for="comment">comment </label> <br>
-             <textarea name="comment" id="comment" cols="30" rows="10"></textarea> <br>
-             <span id="count" class="hide"></span> <br>
-             <input type="submit" value="submit">
-             </form>
-             <form action="https://ugojo.github.io/Decrown-Tech/" method="post" id="interests">
-                <label for="interests">Genres </label> <br>
-                <label for="all"><input type="checkbox" name="all" id="all" value="all">All </label> <br>
-                <label><input type="checkbox" name="genre"  value="html">Html </label> <br>
-                <label><input type="checkbox" name="genre"  value="xml"> Xml </label> <br>
-                <label><input type="checkbox" name="genre"  value="javascript"> Javascript </label> <br>
-                <label><input type="checkbox" name="genre"  value="python"> Python </label> <br>
-             </form>
-             <form action="https://ugojo.github.io/Decrown-Tech/" method="post" id="how-heard">
-                <label for=""> how did you hear about us</label> <br>
-                 <input type="radio" name="heard" value="google"> <label for="google"> Google</label> <br>
-                 <input type="radio" name="heard" value="newspepper"><label for="newspepper">Newspepper</label> <br>
-                 <input type="radio" name="heard" value="friend"> <label for="friend"> Friend</label> <br>
-                 <input type="radio" name="heard" id="other" value="other">
-                 <label for="other"> Others</label> <br>
-                <input type="text" name="other-input" id="other-text">  <br>
-                <input type="submit" value="submit">
-            </form>
-        </section>
+    <div class="from-container" id="formContaimner">
+  
+        <h1 style="text-align: center;">Register</h1>
+        <p style="text-align: center;">Please fill in this form to create an account.</p>
+        <hr>
+        <div class="tab">
+            <label for=""> Name</label> <br>
+            <input  oninput="this.className = ' '" type="text" name="" id="" placeholder="First Name...."> <br>
+            <input oninput="this.className = ' '" type="text" name="" id="" placeholder="Last Name....."> <br>
+        </div>
+        <div class="tab">
+            <label for=""> Date Of Birth</label> <br>
+            <input oninput="this.className = ' '" type="text" name="" id="" placeholder="Day...." > <br>
+            <input oninput="this.className = ' '" type="text" name="" id="" placeholder="Month....."> <br>
+            <input oninput="this.className = ' '" type="text" name="" id="" placeholder="Year....." >  <br>
+        </div>
+        <div class="tab">
+            <label for=""> Password</label> <br>
+            <input oninput="this.className = ' '" type="password" name="" placeholder="*********" id="psw"> <br>
+            <input oninput="this.className = ' '" type="password" name="" placeholder="Repeat-Password.." id="rePsw"> <br> 
+             <span class="msg"></span>
+        </div>
+        <div class="tab">
+            <label for=""> Username</label> <br>
+            <input oninput="this.className = ' '" type="text" name="" placeholder="Username.." id=""> <br>
+            <label for=""> Nikename</label> <br>
+            <input oninput="this.className = ' '" type="text" name="" placeholder="Nikename.." id="">
+        </div>
+        <div class="myBtn">
+        <button class="registerbtn" onclick="prevNext(-1);" id="prev"> Prev</button> 
+        <button class="registerbtn" onclick="prevNext(1);" id="next"> Next</button> 
+        </div>
+        <div class="formsteps">
+        <span class="steps"></span>
+        <span class="steps"></span>
+        <span class="steps"></span>
+        <span class="steps"></span>
+        </div>
+     
     </div>
-   <script src="js/helper.js"></script>
-   <script src="js/form.js"></script>
-   <script src="js/chk-radio.js"></script>
-   <script src="js/radio.js"></script>
 </body>
+<script>
+   currentTab = 0 ;
+
+   showTab(currentTab);
+
+   function showTab(n){
+     var t , prev ,next , span;
+     t = document.getElementsByClassName("tab");
+     prev = document.getElementById("prev");
+     next = document.getElementById("next");
+
+     t[n].style.display = "block";  
+     
+      if( n == 0 ){
+        prev.style.display = "none";  
+      }else{
+        prev.style.display = "inline";
+      }
+      if( n >= (t.length - 1)){
+        next.innerHTML = "Submit";
+      }else{
+        next.innerHTML = "Next";
+      }
+     finishBtn(n);
+
+   }
+   function prevNext(n , e){
+    var t = document.getElementsByClassName("tab"); 
+     
+      if(n == 1 && !validateFrom()){ return false;}
+      
+      t[currentTab].style.display = "none";
+
+    currentTab = currentTab + n ;
+   if ( currentTab >= t.length) {
+       document.getElementById("myFrom").submit();
+       return false;
+   }
+    showTab(currentTab);
+
+   }
+   
+   function validateFrom(){
+     var t , x, i ,valid ;
+         valid = true;
+
+    t = document.getElementsByClassName("tab");
+    x = t[currentTab].getElementsByTagName("input");
+    psw = document.getElementById("psw");
+    retypePsw = document.getElementById("rePsw");
+     
+     for ( i = 0; i < x.length; i++) {
+       
+       if ( x[i].value == "") {
+        
+         x[i].className += " invalid";
+         valid = false;
+       }
+      if (x[i].type === "password") {
+
+         var pass , passOne 
+             pass = /[a-z]/g;
+             passOne = /[A-Z]/g;
+             passTh = /[0-9]/g;
+
+          if (!x[i].value.match(pass)) {
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg").innerHTML = "Password word must contain lowerCase Charaters";
+            valid = false ;
+          }else if (!x[i].value.match(passOne)) {
+
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain Uppercase Charaters";
+            valid = false ;
+          }else if (!x[i].value.match(passTh)) {
+            
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain Number Charaters";
+            valid = false ;
+          }else if ( x[i].value.length <= 8) {
+            
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Charaters must not be less than eight(8)";
+            valid = false ;
+          }else if ( psw.value !== retypePsw.value) {
+             
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password Mismatch";
+            valid = false ;
+          }
+       }
+       
+     }
+     if (valid) {
+    
+          document.getElementsByClassName("steps")[currentTab].className += " finish";
+
+       }
+       return valid;
+   
+   }
+   function finishBtn(n){
+      
+      var span ,i ;
+       span = document.getElementsByClassName("steps");
+      
+      for ( i = 0; i < span.length; i++) {
+        
+       span.className = span[i].className.replace( " active" , " ");
+      }
+      span[n].className += " active";
+   }
+</script>
 </html>

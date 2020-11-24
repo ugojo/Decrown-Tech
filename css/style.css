@@ -1,12 +1,12 @@
-/*--- All content--------*/
+/*--- All content--------
 *{
     box-sizing: border-box;
 }
-/*--------body--------*/
+/--------body
 body{
   margin: auto;
 }
-/*------- Grid--------*/
+/*------- Grid--------
 
 .warpper {
     display: grid;
@@ -20,7 +20,7 @@ body{
 /*#warpper >* {
      background-color: aqua;
      padding: 30px;
-}*/
+}*
 #grid {
     display: grid;
     position: absolute;
@@ -64,7 +64,7 @@ input:checked + #warpper #grid {
 .footer {
     background-color: black;
 }
-/*positioning*/
+/*positioning
 .header {
     grid-column: 1/13;
     
@@ -94,7 +94,7 @@ input:checked + #warpper #grid {
 grid-column: 1/13;
 }
 
-/*---------End Of Grid--------*/
+/*---------End Of Grid--------
 .header{
     grid-area: header;
     background-color: rgba(0 , 0 ,0 ,0.2);
@@ -114,9 +114,9 @@ grid-column: 1/13;
     top: 0;
     left: 0;
     max-width: 100%;
-    padding: 20%;
+   
 }
-/*------Text area-------*/
+/*------Text area-------
 .navtxt{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
@@ -172,7 +172,7 @@ grid-column: 1/13;
     word-spacing: 20px;
 }
 
-/*---Img-------------*/
+/*---Img-------------
 .flipbox img{
     width:100%;
     height: 100%;
@@ -206,7 +206,7 @@ grid-column: 1/13;
 -----------------------*/
 /*----row_container-----*/
 
-/*---- 3D Flip Style----------*/
+/*---- 3D Flip Style----------
 .flipbox{
     background-color: transparent;
     width: 300px;
@@ -248,7 +248,7 @@ grid-column: 1/13;
     transform: rotateY(180deg);
 }
 
-/*----- Skill---------*/
+/*----- Skill---------
 .skillcontainer{
     display: inline-block;
     width: 300px;
@@ -278,7 +278,7 @@ grid-column: 1/13;
     height: 100%;
     background-color: tomato;
 }
-/*----Footer-------------*/
+/*----Footer-------------
 footer {
     background-color: black;
     color: white;
@@ -296,15 +296,14 @@ a{
 .fa{
     font-size: 25px;
 }
-/*-- Media Queria--------*/
-@media  screen and (min-width:992px){
+/*-- Media Queria--------
+@media  screen and (min-width:800px){
+    .section {
+        grid-column:1/7 ;
+    }
     .aside {
         grid-column: 7/13;
         
-    }
-    .section {
-        grid-column:1/7 ;
-        justify-self: center;
     }
     .skillcontainer{
         width: 500px;
@@ -344,4 +343,90 @@ a{
      font-size: 160px;
      color: rgb(4, 0, 255);
  }
+} */
+body,html{
+    height: 100%;
 }
+.fullImg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/latop_keyborad.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo{
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    padding: -5px;
+    color: white;
+}
+.commingSoonText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    font-size: 30px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+.bottomText{
+    position: absolute;
+    font-size: 15px;
+    bottom: 2px;
+    right: 50px;
+    text-align: center;
+}
+a{
+    color: rgb(6, 241, 6);
+}
+.small{
+    font-size: 15px;
+}
+.big{
+    font-size: 25px;
+}
+.black{
+    color: black;
+}
+@media screen and (max-width: 800px){
+    .commingSoonText{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 549px){
+    .commingSoonText{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px){
+    .logo{
+        bottom: 50px;
+        color: black;
+    }
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+       0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+@keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+           0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 
+          0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+    }
