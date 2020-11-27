@@ -1,4 +1,5 @@
-( function() {
+
+/*-------( function() {
     var form = document.getElementById('login')
     var elements = form.elements ;
     var elUsername = elements.username ;
@@ -79,4 +80,115 @@
       addEvent( password , 'blur' , setError) ;
       addEvent ( conPwd , 'focus' , removeError);
       addEvent( conPwd , 'blur', matchPwd);
-}());
+}()); ------*/
+
+currentTab = 0 ;
+
+   showTab(currentTab);
+
+   function showTab(n){
+     var t ;
+     t = document.getElementsByClassName("tab");
+    
+     t[n].style.display = "block";  
+     
+      if( n == 0 ){
+         document.getElementById("prev").style.display = "none";  
+      }else{
+         document.getElementById("prev").style.display = "inline";
+      }
+      if( n >= (t.length - 1)){
+         document.getElementById("next").innerHTML = "Submit";
+      }else{
+         document.getElementById("next").innerHTML = "Next";
+      }
+     finishBtn(n);
+
+   }
+   function prevNext(n){
+    var t = document.getElementsByClassName("tab");
+     
+      if(n == 1 && !validateFrom()){ return false;}
+      
+      t[currentTab].style.display = "none";
+
+    currentTab = currentTab + n ;
+
+   if ( currentTab >= t.length) {
+       document.getElementById("myFrom").submit();
+       return false;
+   }
+    showTab(currentTab);
+
+   }
+   
+   function validateFrom(){
+     var t , x, i ,valid ;
+         valid = true;
+
+    t = document.getElementsByClassName("tab");
+    x = t[currentTab].getElementsByTagName("input");
+    psw = document.getElementById("psw");
+    retypePsw = document.getElementById("rePsw");
+     
+     for ( i = 0; i < x.length; i++) {
+       
+       if ( x[i].value == "") {
+        
+         x[i].className += " invalid";
+         valid = false;
+       }
+      if (x[i].type === "password") {
+
+         var pass , passOne 
+             pass = /[a-z]/g;
+             passOne = /[A-Z]/g;
+             passTh = /[0-9]/g;
+
+          if (!x[i].value.match(pass)) {
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg").innerHTML = "Password word must contain <strong> lowerCase </strong> charaters";
+            valid = false ;
+          }else if (!x[i].value.match(passOne)) {
+
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain <strong>  Uppercase </strong> charaters";
+            valid = false ;
+          }else if (!x[i].value.match(passTh)) {
+            
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain <strong> Number <strong> ";
+            valid = false ;
+          }else if ( x[i].value.length <= 8) {
+            
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Charaters must not be less than eight(8)";
+            valid = false ;
+          }else if ( psw.value !== retypePsw.value) {
+             
+            x[i].className += " invalid";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password Mismatch";
+            valid = false ;
+          }
+       }
+       
+     }
+     if (valid) {
+    
+          document.getElementsByClassName("steps")[currentTab].className += " finish";
+
+       }
+       return valid;
+   
+   }
+   function finishBtn(n){
+      
+      var span ,i ;
+       span = document.getElementsByClassName("steps");
+      
+      for ( i = 0; i < span.length; i++) {
+        
+       span.className = span[i].className.replace( " active" , " ");
+      }
+      span[n].className += " active";
+   }
