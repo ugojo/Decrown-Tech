@@ -157,12 +157,12 @@ currentTab = 0 ;
           }else if (!x[i].value.match(passTh)) {
             
             x[i].className += " invalid";
-            document.getElementsByClassName("msg")[0].innerHTML = "Password word must contain <strong> Number <strong> ";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password must contain <strong> Number <strong> ";
             valid = false ;
           }else if ( x[i].value.length <= 8) {
             
             x[i].className += " invalid";
-            document.getElementsByClassName("msg")[0].innerHTML = "Charaters must not be less than eight(8)";
+            document.getElementsByClassName("msg")[0].innerHTML = "Password must not be less than eight(8)";
             valid = false ;
           }else if ( psw.value !== retypePsw.value) {
              

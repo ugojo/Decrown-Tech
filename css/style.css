@@ -382,6 +382,19 @@ body,html{
     right: 50px;
     text-align: center;
 }
+.middel{
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 60, 0);
+    text-shadow: 0 0 10px #0000,0 0 10px #0000, 0 0 20px #0000 ,0 0 30px #0000; 
+    top: 60%;
+    left: 50%;
+    padding-left: 30px;
+    padding-top: 100px;
+    text-align: center;
+    transform: translate( -50% , -50%);
+}
 a{
     color: rgb(6, 241, 6);
 }
