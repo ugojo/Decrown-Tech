@@ -407,6 +407,11 @@ a{
 .black{
     color: black;
 }
+@media screen and (max-width: 600px){
+    .middel{
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 800px){
     .commingSoonText{
         font-size: 35px;
