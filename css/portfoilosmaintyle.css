@@ -58,6 +58,7 @@
     }
   }
   
+  
   /* Responsive layout - makes the two columns stack on top of each other */
   @media screen and (max-width: 791px) {
     .column {

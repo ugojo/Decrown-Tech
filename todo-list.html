@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Todo-list</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .row{
+            margin: 0 auto;
+            width: 75%;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+       .header{
+           width: 70%;
+           margin: 0;
+           padding: 20px;
+           text-align: center;
+           color: rgb(255, 255, 255);
+           background-color: green;
+       }
+      .myInput{
+          padding: 15px;
+          width: 50%;
+      }
+      .add{
+          padding: 15px;
+          width: 25%;
+      }
+      ul{
+          position: relative;
+          margin: 0 auto;
+          padding: 0;
+          list-style: none;
+      }
+      li{
+          position: relative;
+          padding: 12px 10px 15px 40px;
+          width: 70%;
+          color: honeydew;
+          background-color: gray;
+          border-bottom: 1px solid black;
+          opacity: .6;
+          cursor: pointer;
+      }
+      li:nth-child(odd){
+          background-color: rgb(88, 87, 87);
+      }
+      li:hover{
+          opacity: 1;
+      }
+      ul li.checked {
+          text-decoration: line-through;
+          background-color: rgb(114, 80, 80);
+      }
+      li.checked::before{
+          content: " ";
+          border-color: black;
+          border-style: solid;
+          border-width: 0 2px 2px 0;
+          border-radius: 0;
+          position: absolute;
+          font-weight: bold;
+          width: 7px;
+          height: 15px;
+          top: 10px;
+          left: 10px;
+          transform: rotate(45deg);
+      }
+      .close{
+          position: absolute;
+          font-weight: bold;
+          width: 15px;
+          height: 15px;
+          bottom: 15px;
+          right: 10px;
+          color: black;
+      }
+    </style>
+</head>
+<body>
+   <div class="row">
+       <div class="header">
+           <h2> To Do List</h2>
+           <input type="text" name="" id="myInput" class="myInput">
+           <button class="add" onclick="addToDo()">Add</button>
+       </div>
+       <ul id="myUl">
+           <li class="checked"> Watch movie</li>
+           <li> Party</li>
+           <li> Code</li>
+           <li class="checked"> Study</li>
+           <li>Play with friends</li>
+       </ul>
+   </div>
+</body>
+<script>
+    var listItem , i ;
+
+    listItem = document.getElementsByTagName("LI");
+
+    for ( i  = 0; i < listItem.length; i++) {
+        
+       var  span = document.createElement("span");
+       var  txt = document.createTextNode("X");
+             span.className = "close";
+
+         span.appendChild(txt);
+         listItem[i].appendChild(span); 
+    }
+    var closeBtn = document.getElementsByClassName("close");
+    for ( i = 0; i < closeBtn.length; i++) {
+        
+         closeBtn[i].addEventListener( "click" , function(e) {
+
+             var close = this.parentElement ;
+             close.style.display = "none";             
+         });
+        
+    };
+    var uList = document.querySelector("ul");
+
+    uList.addEventListener("click" , function(e) {
+        
+        if ( e.target.tagName === "LI") {
+             e.target.classList.toggle("checked");
+        };
+    }, false);
+
+    function addToDo(e) {
+        
+       var myInput , inputValue ,txt;
+       myInput = document.getElementById("myInput");
+       
+       inputValue = myInput.value ;
+
+       newList = document.createElement("li");
+       txt = document.createTextNode(inputValue);
+
+       newList.appendChild(txt);
+
+       if (myInput.value === "") {
+           alert("you must write something");
+       }else{
+
+         document.getElementById("myUl").appendChild(newList);
+
+         document.getElementById("myInput").value = " ";
+
+       }
+
+       for ( i  = 0; i < listItem.length; i++) {
+        
+        var  span = document.createElement("span");
+        var  txt = document.createTextNode("X");
+              span.className = "close";
+ 
+          span.appendChild(txt);
+          newList.appendChild(span); 
+     }
+
+     for ( i = 0; i < closeBtn.length; i++) {
+        
+        closeBtn[i].addEventListener( "click" , function(e) {
+
+            var close = this.parentElement ;
+            close.style.display = "none";             
+        });
+       
+   };
+}
+var  myInput = document.getElementById("myInput");
+  myInput.addEventListener( "keyup" , function (ev) {
+      
+    if ( ev.keyCode === 13) {
+          document.getElementById("myInput").click();
+    }
+  })
+
+</script>
+</html>
