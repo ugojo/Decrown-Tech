@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+}
+/*---- Container Style ------------*/
+.row{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12,1fr);
+    min-width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 15px;
+    gap: 10px;
+}
+.row >*{
+    background-color: blueviolet;
+    padding: 20px;
+}
+.col-fact{
+    grid-column: 2/12;
+    padding: 50px;
+    text-align: center;
+    display: none;
+}
+.col-startQuiz{
+    grid-column: 2/12;
+    text-align: center;
+}
+.col-meun{
+    grid-column: 2/12;
+    text-align: center;
+    display: none;
+}
+.col-tip{
+    grid-column:2/12;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid green;
+    border-left: 20px solid green ;
+    display: none;
+}
+.col-main{
+    grid-column: 2/12;
+    position: relative;
+    background-color: white;
+    text-align: center;
+    display:none;
+}
+.col-recentScore{ 
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 50%;
+    height: 300px;
+    transform: translate(-50%,-50%,-50%,50%);
+    color: white;
+    text-align: center;
+    background-color: green;
+    display: none;
+}
+/* Styling the startBtn ---*/
+.userName{
+    background-color: transparent;
+     border: none;
+     outline: none;
+     width: 30%;
+     font-size: 20px;
+     font-weight: bold;
+     border-bottom: 2px solid white;
+     margin: 10px;
+     padding: 2px;
+ }
+ .startBtn{
+    position: relative;
+    width: 50%;
+    height: 50px;
+    color: blue;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid blue;
+    border-radius: 0 10px;
+    box-shadow: 0 2px 8px 0 rgb(101, 101, 184),0 4px 16px 0 rgba(0,0,0, 0.4);
+  }
+  .startBtn span::after{
+    content: "\00bb";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    opacity: 0;
+    transition: 0.5;
+  }
+  .startBtn:hover{
+    outline: none;
+    box-shadow: inset 0 2px 6px 0 rgb(113, 111, 204);
+  }
+ .startBtn:hover span::after{
+   opacity: 1;
+ }
+ .startBtn:hover span::after{
+  padding-right: 5px;
+  right: 0;
+}
+/*---- MeunBtn ---------*/
+.meunBtn{
+    margin: 5px;
+    padding: 30px;
+    width: 50%;
+    color: blue;
+    font-weight: bold;
+    border-radius:0 20px ;
+    border: 1px solid rgb(159, 159, 252);
+}
+.meunBtn:hover{
+    border-radius: 20px 0 ;
+}
+/*------ Tip ---------*/
+.tipTxt{
+    padding: 5px 5px 5px 80px;
+}
+
+.startQuiz{
+    float: right;
+}
+.seeMorefact,.startQuiz{
+    display: inline-block;
+    width: 30%;
+    height: 30%;
+    font-weight: bold;
+    border: 1px solid green;
+}
+/*-------- Question and Answer style -----*/
+.score{
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    width: 100px;
+    background-color: rgb(184, 221, 177);
+    border: 1px solid green;
+}
+.worngAnw{
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 100px;
+    background-color: rgb(224, 169, 169);
+    border: 1px solid red;
+}
+.questionNum{
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
+}
+.question{
+    padding: 15px 20px 20px 8px ;
+}
+.option{
+    display: inline;
+    position: relative;
+    margin: 5px;
+    padding: 14px 40px;
+    border: 2px solid gold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.correct{
+    border: 2px solid green;
+    background-color: rgb(213, 238, 213);
+}
+.correct::after{
+    content: " ";
+    position: absolute;
+    color: green;
+    border-style: solid ;
+    border-width: 0 3px 3px 0;
+    border-radius: 0;
+    top: 10px;
+    right: 10px;
+    width: 6px;
+    height: 15px;
+    transform: rotate(45deg);
+}
+.worng{
+    border: 2px solid red;
+    background-color: rgb(194, 155, 155);
+}
+.worng::after {
+    content: "X";
+    color: red;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 6px;
+    height: 15px;
+}
+.nextBtn{
+    display: inline;
+    position: relative;
+    margin: 5px;
+    padding: 14px 40px;
+    border: 2px solid gold;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.recent{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 90px;
+    font-weight: bold;
+    background-color: rgb(90, 90, 90);
+    color: white;
+    border:1px solid gold;
+}
+.closeRecentScore{
+    position: absolute;
+    top: -35px;
+    right: -5px;
+    font-size: 70px;
+    font-size: bold;
+    cursor: pointer;
+}
+/*--- Logo ----------*/
+.logo{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+  }
+  /*---- Responvie ------*/
+
+  @media screen and (max-width: 788px){ 
+    .col-main{
+        text-align: center;
+    }
+  }
