@@ -1,7 +1,10 @@
 let myInput = document.querySelector(".myInput");
 
-function mainQuiz() {
-     document.querySelector(".startCol").style.display = "none";
+function seeTip(){
+     document.querySelector(".col-fact").style.display = "block";
+}
+function colseFact() {
+     document.querySelector(".col-fact").style.display = "none";
 }
 let startBtn = document.querySelector(".startBtn").addEventListener("click" , function() {
     
@@ -45,7 +48,7 @@ let facts = [
         fact:"IGNORING YOUR PASSION IS SLOW SUICIDE"
     },
     {
-        fact:"BE HELPFUL WHEN YOU SEE A PRESON WITHOUT A SMILE GIVE THE YOURS"
+        fact:"BE HELPFUL WHEN YOU SEE A PRESON WITHOUT A SMILE GIVE THEM YOURS"
     },
     {
         fact:"ELEGANCE IS AND ATTITUDE"
@@ -71,7 +74,6 @@ let facts = [
 function startQuiz() {
     document.querySelector(".col-tip").style.display = "none";
     document.querySelector(".col-main").style.display = "block";
-    document.querySelector(".col-fact").style.display = "block";
     document.querySelector(".logo").style.display = "none";
     showQuestion()
 }
@@ -107,12 +109,12 @@ let questions = [
      },
      {
          question: 'The richest Africa man is from which of these county',
-         opt1: 'SouthAfrica',
+         opt1: 'South africa',
          opt2: 'Ghana',
-         opt3: 'Nigria',
-         opt4: 'Algria',
+         opt3: 'Nigeria',
+         opt4: 'Algeria',
          answer: 3,
-         hint: 'The richest man in african is'
+         hint: 'Aliko Dangote is the richest man in Africa and he is a Nigeria'
      }
 
     ]
@@ -172,6 +174,10 @@ let accpectingAnws = true ;
        currentTarget.className += ' worng';
         
        document.querySelector(".worngAnw").innerHTML = 'worng :' + worng ;
+   }
+   if (!accpectingAnws) {
+       
+       document.querySelector(".col-fact p").innerHTML = currentQuestion[currentIndex].hint ;
    }
   }
  }
