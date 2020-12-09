@@ -270,9 +270,9 @@ button{
         z-index: 3;
         top: 30%;
         left: 25%;
-        width: 50%;
+        width: 75%;
         height: 300px;
-        padding: 20px;
+        padding: 5px;
         transform: translate(-50%,-50%,-50%,50%);
         color: white;
         text-align: center;
