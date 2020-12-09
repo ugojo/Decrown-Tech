@@ -21,6 +21,9 @@ body{
     padding: 20px;
 }
 .col-fact{
+    display: none;
+}
+.col-fact-two{
     grid-column: 2/12;
     text-align: center;
     background-color: black;
@@ -259,29 +262,27 @@ button{
         width: 50px;
     }
     .col-fact{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
     }
     .fact-box{
         position: absolute;
-        top: 30px;
-        left: 50%;
+        z-index: 3;
+        top: 30%;
+        left: 25%;
         width: 50%;
         height: 300px;
-        padding: 5px;
+        padding: 20px;
         transform: translate(-50%,-50%,-50%,50%);
         color: white;
         text-align: center;
         border: 2px solid white;
         background-color: green;
-        z-index: 3;
     }
     .closeFact{
         position: absolute;
@@ -290,5 +291,8 @@ button{
         font-size: 70px;
         font-size: bold;
         cursor: pointer;
+    }
+    .col-fact-two{
+      display: none;
     }
 }

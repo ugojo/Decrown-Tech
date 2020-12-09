@@ -176,7 +176,8 @@ let accpectingAnws = true ;
        document.querySelector(".worngAnw").innerHTML = 'worng :' + worng ;
    }
    if (!accpectingAnws) {
-       
+
+       document.querySelector(".col-fact-two p").innerHTML = currentQuestion[currentIndex].hint ;
        document.querySelector(".col-fact p").innerHTML = currentQuestion[currentIndex].hint ;
    }
   }
