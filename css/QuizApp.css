@@ -249,7 +249,7 @@ button{
     left: 0px;
   }
   /*---- Responvie ------*/
-  @media screen and (max-width: 799px){
+  @media screen and (max-width: 600px){
     .tipBtn{
         display: block;
         padding: 15px;
@@ -272,7 +272,7 @@ button{
     .fact-box{
         position: absolute;
         top: 30px;
-        left: 25%;
+        left: 150px;
         width: 50%;
         height: 300px;
         padding: 5px;
