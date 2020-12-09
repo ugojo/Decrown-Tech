@@ -54,28 +54,33 @@ body{
 .col-recentScore{ 
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 25%;
     width: 50%;
     height: 300px;
+    padding: 20px;
     transform: translate(-50%,-50%,-50%,50%);
     color: white;
     text-align: center;
+    border: 2px solid white;
     background-color: green;
     display: none;
 }
 /* Styling the startBtn ---*/
-.userName{
+button{
+    cursor: pointer;
+}
+.myInput{
     background-color: transparent;
      border: none;
      outline: none;
-     width: 30%;
-     font-size: 20px;
-     font-weight: bold;
+     font-size: 15px;
+     width: auto;
      border-bottom: 2px solid white;
      margin: 10px;
      padding: 2px;
  }
  .startBtn{
+    cursor: pointer;
     position: relative;
     width: 50%;
     height: 50px;
@@ -104,6 +109,10 @@ body{
  .startBtn:hover span::after{
   padding-right: 5px;
   right: 0;
+}
+.seeTip{
+    float: left;
+    bottom: 2px;
 }
 /*---- MeunBtn ---------*/
 .meunBtn{
@@ -215,11 +224,12 @@ body{
     background-color: rgb(90, 90, 90);
     color: white;
     border:1px solid gold;
+    cursor: pointer;
 }
 .closeRecentScore{
     position: absolute;
-    top: -35px;
-    right: -5px;
+    top: -43px;
+    right: -20px;
     font-size: 70px;
     font-size: bold;
     cursor: pointer;
@@ -229,13 +239,13 @@ body{
     font-family: 'Courier New', Courier, monospace;
     color: white;
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     left: 2px;
   }
   /*---- Responvie ------*/
 
   @media screen and (max-width: 788px){ 
     .col-main{
-        text-align: center;
+       
     }
   }

@@ -9,16 +9,14 @@
 <body>
     
     <div class="row">
-        <div class="col-fact">
-            <h3> FACT FOR THE DAY</h3> 
-            <P class="facts">  </P>
-        </div>
        <div class="col-startQuiz">
+        <p style="color: aliceblue;">This quiz base on Africa Questions how well do you known the history of Africa </p>
           <h2> Start Quiz</h2>
-          <input type="text" name="" id="" placeholder="Enter your name....." class="userName"> <br>
-        <button class="startBtn" onclick="quizMeun()"> <span>START</span></button>
+          <input type="text" class="myInput" name="" id="" placeholder="Enter your name....."> <br>
+        <button class="startBtn"> <span>START</span></button>
        </div>  
        <div class="col-meun">
+           <div class="see"></div>
         <button class="meunBtn" onclick="colTip()"> Normal Mode </button>
         <button class="meunBtn"> Timer Mode </button>
        </div>
@@ -26,7 +24,7 @@
             <h2 style="text-align: center;">FACT</h2>
               <p style="text-align: center;" id="demo"></p>
 
-              <button class="seeMorefact"> See More facts</button>
+              <button class="seeMorefact"> See facts</button>
               <button class="startQuiz" onclick="startQuiz()"> Start Quiz</button>
        </div>
        <div class="col-main">
@@ -35,14 +33,18 @@
             <div class="worngAnw"> Wrong:0</div>
             <div class="question"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique,
                  aliquam asperiores eos corporis cumque?</div>
-            <button class="option correct" data-opt="1"> Lorem ipsum dolor sit amet.</button>
+            <button class="option" data-opt="1"> Lorem ipsum dolor sit amet.</button>
             <button class="option" data-opt="2"> Lorem ipsum dolor sit amet.</button>
             <button class="option" data-opt="3"> Lorem ipsum dolor sit amet.</button>
-            <button class="option worng" data-opt="4"> Lorem ipsum dolor sit amet.</button> <br>
-            <button class="nextBtn">Next</button>
+            <button class="option" data-opt="4"> Lorem ipsum dolor sit amet.</button> <br>
+            <button class="nextBtn" onclick="nextQuestion()">Next</button>
+            <button class="seeTip">TIP</button>
        </div>
-    </div>
-    <button class="recent" onclick="showScore()">SEE RECENT SCORE</button>
+     <div class="col-fact">
+         <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, magni? </p>
+     </div>
+</div>
+   <button class="recent" onclick="showScore()">SEE RECENT SCORE</button>
     <div class="col-recentScore">
         <div class="closeRecentScore"> &times;</div>
         <h3> RECENT SCORES</h3>
