@@ -243,9 +243,3 @@ button{
     left: 2px;
   }
   /*---- Responvie ------*/
-
-  @media screen and (max-width: 788px){ 
-    .col-main{
-       
-    }
-  }
