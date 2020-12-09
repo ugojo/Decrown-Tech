@@ -38,17 +38,22 @@
             <button class="option" data-opt="3"> Lorem ipsum dolor sit amet.</button>
             <button class="option" data-opt="4"> Lorem ipsum dolor sit amet.</button> <br>
             <button class="nextBtn" onclick="nextQuestion()">Next</button>
-            <button class="seeTip">TIP</button>
+            <button class="tipBtn" onclick="seeTip()">TIP</button>
        </div>
      <div class="col-fact">
-         <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, magni? </p>
+         <div class="fact-box">
+            <span class="closeFact" onclick="colseFact()"> &times;</span>
+         <p  style="color: white;">  </p>
+        </div>
      </div>
 </div>
    <button class="recent" onclick="showScore()">SEE RECENT SCORE</button>
     <div class="col-recentScore">
+        <div class="score-box">
         <div class="closeRecentScore"> &times;</div>
         <h3> RECENT SCORES</h3>
            NO RECENT SCORE
+       </div>
     </div>
     <div class="logo">
         <h3>Decrown Tech</h3>
