@@ -216,6 +216,7 @@ function submitQuestion() {
     document.querySelector(".playerName").innerHTML = myInput.value ;
     document.querySelector(".playerScore").innerHTML = score ;
     document.querySelector(".worngAns").innerHTML = worngAws ;
+    
 }
 /*--------  Store Submited  Score ------------*/
 
@@ -262,4 +263,8 @@ function submitQuestion() {
        
     localStorage.removeItem("playerScores")
     return window.location.reload()
+   }
+   function replayQuiz() {
+
+    return window.location.reload()  
    }

@@ -78,6 +78,16 @@ body{
 .score-box p {
     overflow-x: hidden;
 }
+.firstRound{
+    width: 250px;
+    background-color: gray;
+}
+.roundWith{
+    width: 1%;
+    height: 40px;
+    background-color: gold;
+      
+}
 /* Styling the startBtn ---*/
 button{
     cursor: pointer;
