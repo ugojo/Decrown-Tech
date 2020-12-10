@@ -52,7 +52,7 @@ body{
     text-align: center;
     display:none;
 }
-.col-recentScore{ 
+.col-recentScore,.col-submit{ 
     position: absolute;
     top: 0;
     bottom: 0;
@@ -61,7 +61,7 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
 }
-.score-box{
+.score-box,.subimt-question{
     position: absolute;
     z-index: 3;
     top: 30%;
@@ -73,7 +73,10 @@ body{
     color: white;
     text-align: center;
     border: 2px solid white;
-    background-color: green;
+    background-color: green; 
+}
+.score-box p {
+    overflow-x: hidden;
 }
 /* Styling the startBtn ---*/
 button{
@@ -260,6 +263,9 @@ button{
         bottom: 2px;
         left: 2px;
         width: 50px;
+        background-color: rgb(247, 247, 60);
+        color: white;
+        border: 1px solid yellow;
     }
     .col-fact{
         position: absolute;
