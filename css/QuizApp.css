@@ -246,7 +246,7 @@ button{
     font-size: bold;
     cursor: pointer;
 }
-.clearScore{
+.clearScore,.replayBtn{
     position: absolute;
     bottom: 2px;
     left: 2px;
