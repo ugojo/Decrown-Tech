@@ -114,13 +114,13 @@ let questions = [
          opt3: 'Nigeria',
          opt4: 'Algeria',
          answer: 3,
-         hint: 'Aliko Dangote is the richest man in Africa and he is a Nigeria'
+         hint: 'Aliko Dangote is the richest man in Africa and he is a Nigerian'
      }
 
     ]
 /*------------- show Question--------------------*/
 let score = 0;
-let worng = 0;
+let worngAws = 0;
 let questionLen = questions.length ;
 let currentIndex = 0 ;
 let showLength ;
@@ -169,11 +169,11 @@ let accpectingAnws = true ;
       
       document.querySelector(".score").innerHTML ='socre :' + score;
    }else{
-       worng++;
+       worngAws++;
        correct = false ;
        currentTarget.className += ' worng';
         
-       document.querySelector(".worngAnw").innerHTML = 'worng :' + worng ;
+       document.querySelector(".worngAnw").innerHTML = 'worng :' + worngAws ;
    }
    if (!accpectingAnws) {
 
@@ -183,9 +183,22 @@ let accpectingAnws = true ;
   }
  }
 }
+/* ------ Nexting Question ----------*/
 function nextQuestion() {
      currentIndex++ ; 
      showingNow++ ;
+    
+/*-------- If Length is Less or Equal To Zero --------*/
+if (currentIndex >= questions.length - 1) {
+    
+    document.querySelector(".nextBtn").innerHTML = "submit";
+}
+if ( currentIndex == questions.length) {
+    
+    submitQuestion();
+    storeScore()
+    currentIndex -- ;
+}
 
      showLength.innerHTML = showingNow + " " + 'of' + " " + questionLen;
      showQuestion(currentIndex);
@@ -196,3 +209,52 @@ function nextQuestion() {
         optionsBtn[i].className = " option";
      }
 }
+/*------ Submitting the Question ----------- */
+function submitQuestion() {
+    
+    document.querySelector(".col-submit").style.display = "block";
+    document.querySelector(".playerName").innerHTML = myInput.value ;
+    document.querySelector(".playerScore").innerHTML = score ;
+    document.querySelector(".worngAns").innerHTML = worngAws ;
+}
+/*--------  Store Submited  Score ------------*/
+
+ function  storeScore() {
+    
+    let playerScores;
+    let recentScore = {
+                      name : myInput.value,
+                      scores : score
+                       }
+
+    if ( localStorage.getItem("playerScores") === null) {
+        
+        playerScores = [];
+    }else{
+        playerScores = JSON.parse( localStorage.getItem("playerScores"))
+    }
+       playerScores.push(recentScore);
+
+     localStorage.setItem("playerScores", JSON.stringify(playerScores) );
+   
+ }
+ if ( JSON.parse( localStorage.getItem("playerScores") !== null)) {
+        
+    let recentScores = JSON.parse( localStorage.getItem("playerScores"));
+    
+      recentScores.forEach( score => {
+
+      let  newList = document.createElement("li");
+          newList.className = 'myScore' ;
+           newList.innerHTML = score.name;
+       
+       let highScore = document.createElement("li")
+           highScore.className = 'highscore' 
+           highScore.innerHTML = score.scores;
+             
+      document.querySelector(".score-box p").appendChild(newList)
+      document.querySelector(".score-box p").appendChild(highScore);
+        
+
+    });
+   }
