@@ -80,7 +80,7 @@ body{
     overflow-x: hidden;
 }
 .firstRound{
-    width: 250px;
+    width: 100%;
     background-color: gray;
 }
 .roundWith{
