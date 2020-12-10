@@ -246,6 +246,15 @@ button{
     font-size: bold;
     cursor: pointer;
 }
+.clearScore{
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    height: 30px;
+    background-color: rgb(219, 177, 177);
+    color: rgb(0, 0, 0);
+    border: 1px solid red;
+}
 /*--- Logo ----------*/
 .logo{
     font-family: 'Courier New', Courier, monospace;

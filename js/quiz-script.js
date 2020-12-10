@@ -258,3 +258,8 @@ function submitQuestion() {
 
     });
    }
+   function clearScore() {
+       
+    localStorage.removeItem("playerScores")
+    return window.location.reload()
+   }
