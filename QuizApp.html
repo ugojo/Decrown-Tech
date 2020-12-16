@@ -3,81 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-    <title>QUiz App</title>
+    <title> Quiz App</title>
     <link rel="stylesheet" href="css/QuizApp.css">
 </head>
 <body>
-    
-    <div class="row">
-       <div class="col-startQuiz">
-        <p style="color: aliceblue;font-size: 15px;">This quiz is base on Africa questions
-             how well do you known the history of Africa </p>
-          <h2> Start Quiz</h2>
-          <input type="text" class="myInput" name="" id="" placeholder="Enter your name....."> <br>
-        <button class="startBtn"> <span>START</span></button>
-       </div>  
-       <div class="col-meun">
-           <div class="see"></div>
-        <button class="meunBtn" onclick="colTip()"> Normal Mode </button>
-        <button class="meunBtn"> Timer Mode </button>
+    <div class="row one" style="text-align: center;">
+        <div class="col">
+            <h2 style="font-size: 25px;"> Start Quiz</h2>
+        </div>
+
+        <div class="col" style="background-color: white;">
+          
+            <button class="startBtn"> <span>START</span></button>
        </div>
-       <div class="col-tip">
+    </div>
+    <div class="row two">
+        <div class="col">
+            <p class="back"  onclick="back()"> back</p>
             <h2 style="text-align: center;">FACT</h2>
-              <p style="text-align: center;" id="demo"></p>
-
-              <button class="seeMorefact"> See facts</button>
-              <button class="startQuiz" onclick="startQuiz()"> Start Quiz</button>
-       </div>
-       <div class="col-main">
-            <div class="score"> Score:0</div>
-            <div class="questionNum"> 0 of 0</div>
-            <div class="worngAnw"> Wrong:0</div>
-            <div class="question"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus similique,
-                 aliquam asperiores eos corporis cumque?</div>
-            <button class="option" data-opt="1"> Lorem ipsum dolor sit amet.</button>
-            <button class="option" data-opt="2"> Lorem ipsum dolor sit amet.</button>
-            <button class="option" data-opt="3"> Lorem ipsum dolor sit amet.</button>
-            <button class="option" data-opt="4"> Lorem ipsum dolor sit amet.</button> <br>
-            <button class="nextBtn" onclick="nextQuestion()">Next</button>
-            <button class="tipBtn" onclick="seeTip()">TIP</button>
-       </div>
-
-     <div class="col-fact-two">
-        <p  style="color: white;">  </p> 
+                  <p style="text-align: center;" id="demo"></p>
+    
      </div>
+    
+        <div class="col" style="background-color: rgb(255, 255, 255);"> 
+            <button class="next" onclick="nextQuest()"> Next</button>
+      </div>
+    </div>
+    <div class="row three">
+        <div class="col">
+            categories
+     </div>
+
+        <div class="col" style="background-color: rgb(255, 255, 255);"> 
+          <div class="categories" onclick="currentAffair()">
+            <span></span>  Current Affair
+          </div>
+          <div class="categories">
+              <span></span> Lorem ipsum dolor sit amet.
+         </div>
+         <div class="categories">
+              <span></span> Lorem ipsum dolor sit amet.
+         </div>
+         <div class="categories">
+              <span></span> Lorem ipsum dolor sit amet.
+         </div>
+      </div>
+   </div>
+  
+   <div class="row four">
+    <div class="col questionCol">
+        <div class="question"> Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit. Voluptatibus similique,
+            aliquam asperiores eos corporis cumque?</div>
+            <div class="questionNum"> 0 of 0</div>
+    </div>
+
+    <div class="col btns">
+        <button class="option" data-opt="1"> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</button>
+        <button class="option" data-opt="2"> Lorem ipsum dolor sit amet.</button>
+        <button class="option" data-opt="3"> Lorem ipsum dolor sit amet.</button>
+        <button class="option" data-opt="4"> Lorem ipsum dolor sit amet.</button> <br>
+        <button class="nextBtn" onclick="nextQuestion()">Next</button>
+        <button class="tipBtn" onclick="seeTip()">TIP</button>
+   </div>
+    <div class="tips" style="text-align: center; color: green;">  </div>
 </div>
-<div class="col-fact">
-    <div class="fact-box">
-       <span class="closeFact" onclick="colseFact()"> &times;</span>
-    <p  style="color: white;"> Answer this questiuon to see TIP </p>
+<div class="row five">
+    <div class="col score" style="font-size: 25px;">
+        <h2 class="highScore"></h2>
+        <h3> SCORE </h3>
+            <p class="showScore"></p>
+        <h3> OUT OF</h3>
+              <p class="number"></p>
+    </div>
+
+    <div class="col" style="background-color: white;">
+        <button class="replayBtn" onclick="replayQuiz()">Repaly</button>
    </div>
 </div>
-<div class="col-submit">
-    <div class="subimt-question">
-       <div class="firstRound">
-           <div class="roundWith">
-               
-           </div>
-       </div>
-      <p class="playerName"></p>
-      <p class="playerScore"></p>
-      <p class="worngAns"></p>
-  <button class="replayBtn" onclick="replayQuiz()">Repaly</button>
-   </div>
-</div>
-   <button class="recent" onclick="showScore()">SEE RECENT SCORE</button>
-    <div class="col-recentScore">
-        <div class="score-box">
-        <div class="closeRecentScore"> &times;</div>
-        <p></p>
-        <button class="clearScore" onclick="clearScore()"> Clear Scores</button>
+ <div class="tipBox">
+    <div class="tipsView"> <p> Answer this question to get tips </p>
+        <div class="closeTip" onclick="closeTip()"> &times;</div>
     </div>
-    <div class="logo">
-        <h3>Decrown Tech</h3>
-        <p>Computing at its best...</p>
-    </div>
+ </div>
 </body>
- <script src="js/quiz-script.js"></script>
+  <script src="js/quiz-script.js"></script>
 </html>

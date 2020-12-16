@@ -1,205 +1,112 @@
 *{
     box-sizing: border-box;
 }
-body{
-    margin: 0;
-    background-color: black;
-}
-/*---- Container Style ------------*/
 .row{
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(12,1fr);
-    min-width: 90%;
-    margin: auto;
-    margin-top: 100px;
-    padding: 15px;
-    gap: 10px;
+    transition: 0.2s all linear ;
 }
-.row >*{
-    background-color: blueviolet;
-    padding: 20px;
-}
-.col-fact{
-    display: none;
-}
-.col-fact-two{
-    grid-column: 2/12;
-    text-align: center;
-    background-color: black;
-}
-.col-startQuiz{
-    grid-column: 2/12;
-    text-align: center;
-}
-.col-meun{
-    grid-column: 2/12;
-    text-align: center;
-    display: none;
-}
-.col-tip{
-    grid-column:2/12;
-    padding: 30px;
-    background-color: white;
-    border: 2px solid green;
-    border-left: 20px solid green ;
-    display: none;
-}
-.col-main{
-    grid-column: 2/12;
-    position: relative;
-    background-color: white;
-    text-align: center;
-    display:none;
-}
-.col-recentScore,.col-submit{ 
-    position: absolute;
-    top: 0;
-    bottom: 0;
+
+.col{
+    float: left;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-.score-box,.subimt-question{
-    position: absolute;
-    z-index: 3;
-    font-size: 15px;
-    top: 30%;
-    left: 25%;
-    width: 50%;
-    height: 300px;
-    padding: 20px;
-    transform: translate(-50%,-50%,-50%,50%);
     color: white;
+    background-color: rgb(116, 240, 116);
+}
+.col{
+    padding: 30px;
     text-align: center;
-    border: 2px solid white;
-    background-color: green; 
 }
-.score-box p {
-    overflow-x: hidden;
-}
-.firstRound{
+.categories{
+    display: inline-block;
     width: 100%;
-    background-color: gray;
-}
-.roundWith{
-    width: 1%;
-    height: 40px;
-    background-color: gold;
-      
-}
-/* Styling the startBtn ---*/
-button{
+    height: 50px;
+    padding: 30px;
+    margin: 5px;
+    background-color: rgb(197, 189, 189);
     cursor: pointer;
 }
-.myInput{
-    background-color: transparent;
-     border: none;
-     outline: none;
-     font-size: 15px;
-     width: auto;
-     border-bottom: 2px solid white;
-     margin: 10px;
-     padding: 2px;
- }
- .startBtn{
+.btns{
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.two{
+    display: none;
+}
+.three{
+    display: none;
+}
+.four{
+    display: none;
+}
+.five{
+    display: none;
+}
+#demo ,.question{
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+.questionNum{
+    margin: 5px;
+    padding: 10px;
+}
+
+.option{
+    position: relative;
+    width: 500px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid gold;
+}
+.startBtn{
     cursor: pointer;
     position: relative;
-    width: 50%;
+    width: 150px;
     height: 50px;
-    color: blue;
+    color: rgb(43, 204, 43);
     font-size: 15px;
     font-weight: bold;
-    border: 2px solid blue;
+    border: 2px solid rgb(153, 245, 141);
     border-radius: 0 10px;
-    box-shadow: 0 2px 8px 0 rgb(101, 101, 184),0 4px 16px 0 rgba(0,0,0, 0.4);
-  }
-  .startBtn span::after{
-    content: "\00bb";
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    opacity: 0;
-    transition: 0.5;
+    box-shadow: 0 2px 8px 0 rgb(155, 248, 152),0 4px 16px 0 rgba(0,0,0, 0.4);
+    transition: 0.7 ease-out;
   }
   .startBtn:hover{
     outline: none;
     box-shadow: inset 0 2px 6px 0 rgb(113, 111, 204);
   }
- .startBtn:hover span::after{
-   opacity: 1;
- }
- .startBtn:hover span::after{
-  padding-right: 5px;
-  right: 0;
+  .replayBtn,.next,.nextBtn{
+      width: 100px;
+      height: 40px;
+      margin: 20px;
+      font-size: bold;
+      border: 1px solid green;
+  }
+  .back{
+      position: absolute;
+      left: 20px;
+      top: 10px;
+  }
+  .tipBtn{
+      position: absolute;
+      top: -10px;
+      right: 50px;
+      border-top: 2px solid white;
+      border-bottom:2px solid green;
+      border-right:2px solid green;
+      border-left:2px solid green;
+  }
+  .tipBox{
+      display: none;
+  }
+  button{
+    cursor: pointer;
 }
-.tipBtn{
-    display: none;
-}
-/*---- MeunBtn ---------*/
-.meunBtn{
-    margin: 5px;
-    padding: 30px;
-    width: 50%;
-    color: blue;
-    font-weight: bold;
-    border-radius:0 20px ;
-    border: 1px solid rgb(159, 159, 252);
-}
-.meunBtn:hover{
-    border-radius: 20px 0 ;
-}
-/*------ Tip ---------*/
-.tipTxt{
-    padding: 5px 5px 5px 80px;
-}
-
-.startQuiz{
-    float: right;
-}
-.seeMorefact,.startQuiz{
-    display: inline-block;
-    width: 30%;
-    height: 30%;
-    font-weight: bold;
-    border: 1px solid green;
-}
-/*-------- Question and Answer style -----*/
-.score{
-    position: absolute;
-    right: 2px;
-    top: 5px;
-    width: 100px;
-    background-color: rgb(184, 221, 177);
-    border: 1px solid green;
-}
-.worngAnw{
-    position: absolute;
-    left: 2px;
-    top: 5px;
-    width: 100px;
-    background-color: rgb(224, 169, 169);
-    border: 1px solid red;
-}
-.questionNum{
-    position: absolute;
-    bottom: 2px;
-    right: 3px;
-}
-.question{
-    padding: 15px 20px 20px 8px ;
-}
-.option{
-    display: inline;
-    position: relative;
-    margin: 5px;
-    padding: 14px 45px;
-    border: 2px solid gold;
-    font-size: 16px;
-    border-radius: 10px;
-}
-.correct{
+  /* correct or worng */
+  .correct{
     border: 2px solid green;
     background-color: rgb(213, 238, 213);
 }
@@ -229,74 +136,23 @@ button{
     width: 6px;
     height: 15px;
 }
-.nextBtn{
-    display: inline;
-    position: relative;
-    margin: 5px;
-    padding: 14px 40px;
-    border: 2px solid gold;
-    font-size: 16px;
-    border-radius: 10px;
-}
-.recent{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 90px;
-    font-weight: bold;
-    background-color: rgb(90, 90, 90);
-    color: white;
-    border:1px solid gold;
-    cursor: pointer;
-}
-.closeRecentScore,.closeFact{
-    position: absolute;
-    top: -43px;
-    right: -20px;
-    font-size: 70px;
-    font-size: bold;
-    cursor: pointer;
-}
-.clearScore,.replayBtn{
-    position: absolute;
-    bottom: 2px;
-    left: 2px;
-    height: 30px;
-    background-color: rgb(219, 177, 177);
-    color: rgb(0, 0, 0);
-    border: 1px solid red;
-}
-/*--- Logo ----------*/
-.logo{
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    position: fixed;
-    bottom: 5px;
-    left: 0px;
-  }
-  /*---- Responvie ------*/
-  @media screen and (max-width: 600px){
-    .tipBtn{
-        display: block;
-        padding: 15px;
-        position: absolute;
-        bottom: 2px;
-        left: 2px;
-        width: 50px;
-        background-color: rgb(247, 247, 60);
-        color: white;
-        border: 1px solid yellow;
+/*  display each column */
+
+/* Media Quirey  */
+@media  screen and (max-width:600px){
+    .tips{
+        display: none;
     }
-    .col-fact{
+    .tipBox{
+        display: none;
         position: absolute;
         top: 0;
         bottom: 0;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
-        display: none;
     }
-    .fact-box{
+    .tipsView{
         position: absolute;
         z-index: 3;
         top: 30%;
@@ -310,15 +166,26 @@ button{
         border: 2px solid white;
         background-color: green;
     }
-    .closeFact{
+    .closeTip{
         position: absolute;
-        top: -43px;
-        right: -20px;
-        font-size: 70px;
-        font-size: bold;
+        top: -35px;
+        right: -15px;
+        font-size: 50px;
+        font-weight: bold;
         cursor: pointer;
     }
-    .col-fact-two{
-      display: none;
+} 
+@media  screen and (max-width:800px){
+
+    .header,.footer{
+        padding: 150px;
     }
-}
+    .startBtn{
+        width: 70px;
+    }
+    .option{
+        width: 200px;
+        height: 50px;
+        margin: 5px;
+    }
+} 
