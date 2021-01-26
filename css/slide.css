@@ -29,3 +29,89 @@ button {
 button.active {
     background-color:black ;
 }
+
+
+
+/* Gallery */
+.slideContainer{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+.slideContent{
+    display: none;
+    position: relative;
+    transition: background .4s ease-out;
+}
+.slideNum{
+    position: absolute;
+    top: 2px;
+    left: 3px;
+}
+.caption{
+    padding: 2px 0 5px;
+}
+.dotalign{
+    width: 100%;
+    text-align: center;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(226, 178, 19);
+    background-color: black;
+    cursor: pointer;
+    transition: background .2s linear;
+}
+.active{
+    background-color: goldenrod;
+}
+.prev , .next{
+    position: absolute;
+    font-size: 30px;
+    top: 150px;
+    margin-top: -50px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev:hover , .next:hover {
+    background-color: goldenrod;
+}
+.prev{
+    left: 5px;
+}
+.next{
+    right: 5px;
+}
+.fadeout{
+    -webkit-animation-name: fade;
+     animation-name: fade;
+}
+/* Responsive */
+@media screen and (min-width: 484px) {
+    .prev , .next {
+        top: 230px;
+    }
+}
+@media screen and (min-width: 800px) {
+    .prev , .next {
+        top: 150px;
+    }
+    }
+  @-webkit-keyframes fade {
+      from{opacity: .4}
+      to {opacity: 1}
+  }
+  @keyframes fade {
+      from{opacity: .4}
+      to{opacity: 1}
+  }

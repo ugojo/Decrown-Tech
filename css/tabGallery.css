@@ -3,7 +3,8 @@
 }
 .col{
     float: left;
-    width: 25%;
+    width: 20%;
+    margin: 10px 10px 0;
     padding: 2px;
     cursor: pointer;
 }
@@ -99,6 +100,9 @@
 .scale{
     -webkit-animation-name: scale;
     animation-name: scale;
+}
+img{
+    width: 100%;
 }
 @-webkit-keyframes scale {
     from{ scale: 0;}

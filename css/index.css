@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: brown;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+}
+.navContainer{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+.circleNav{
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+img{
+   width: 100%;
+}
+.container{
+    transform-origin: top left;
+    background-color: white;
+    color: #000000;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 80px;
+    transition: transform 0.5s ease-in-out;
+}
+.container.showNav{
+    transform: rotate(-20deg);
+}
+
+.circleNav button{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 26px;
+    color: #fff;
+  }
+
+.circleNav button#open{
+    left: 60%;
+}
+.circleNav button#close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+.container.showNav .circleNav {
+    transform: rotate(-75deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+  }
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-150%);
+    transition: transform 0.5s ease-in-out;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+nav ul li + li a{
+    font-size: 20px;
+}
+.container.showNav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+.container.showNav + nav  li + li {
+    margin-left: -10px;
+}
+.container.showNav nav li + li + li{
+    margin-left: -15px;
+    transition-delay: 0.6s;
+}
+section{
+    margin: auto 0;
+    padding: 10px;
+}

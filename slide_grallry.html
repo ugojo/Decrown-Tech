@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabGallery</title>
+    <link rel="stylesheet" href="./css/tabGallery.css">
+</head>
+<body>
+    <div class="column">
+        <div class="content">
+          <div class="modalrows">
+            <div class="col">
+              <img class="imgHover" onclick="openModal();currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="">
+            </div>
+            <div class="col">
+             <img  class="imgHover" onclick="openModal();currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="">
+           </div>
+           <div class="col">
+             <img   class="imgHover" onclick="openModal();currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="">
+           </div>
+           <div class="col">
+             <img   class="imgHover" onclick="openModal();currentSlide(4)" src="../Decrown-Tech/img/img_nature.jpg" alt="">
+           </div>
+         </div>
+         <div class="myModal scale" id="myModal">
+           <span onclick="closeModal()" id="closeModal" class="close">&times;</span>
+           <div class="modalContent">
+             <div class="mySlide">
+               <img   class="imgs" src="../Decrown-Tech/img/img_lights_wide.jpg" alt="">
+               <div class="imgNum">1/4</div>
+            </div>
+           <div class="mySlide">
+             <img  class="imgs" src="../Decrown-Tech/img/img_5terre_wide.jpg" alt="">
+             <div class="imgNum">2/4</div>
+           </div>
+           <div class="mySlide">
+            <img class="imgs" src="../Decrown-Tech/img/img_mountains_wide.jpg" alt="">
+            <div class="imgNum">3/4</div>
+          </div>
+         <div class="mySlide">
+          <img  class="imgs" src="../Decrown-Tech/img/img_nature_wide.jpg" alt="">
+           <div class="imgNum">4/4</div>
+        </div>
+        <a onclick="modalCon(-1)" class="pervModal">&#10094;</a>
+        <a onclick="modalCon(1)" class="nextModal">&#10095;</a>
+        <div class="modalCaption">
+           <p> </p>
+       </div>
+        <div class="modalrows">
+        <div class="col">
+         <img class="modaldot" onclick="currentSlide(1)" src="../Decrown-Tech/img/img_lights.jpg" alt="lights">
+       </div>
+       <div class="col">
+        <img class="modaldot" onclick="currentSlide(2)" src="../Decrown-Tech/img/img_5terre.jpg" alt="5terre">
+      </div>
+      <div class="col">
+        <img class="modaldot" onclick="currentSlide(3)" src="../Decrown-Tech/img/img_mountains.jpg" alt="mountains">
+      </div>
+      <div class="col">
+        <img class="modaldot" onclick="currentSlide(4)"src="../Decrown-Tech/img/img_nature.jpg" alt="nature">
+     </div>
+     </div>
+    </div>
+    </div> 
+       </div>
+     </div>
+</body>
+ <script src="./js/tabGallery.js"></script>
+</html>

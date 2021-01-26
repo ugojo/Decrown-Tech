@@ -41,6 +41,7 @@ function sortTable(n) {
             switching = true;
            
             switchCount ++;
+            
         }else{
             if (switchCount == 0 && dir == "asc") {
                 dir = "desc";
@@ -50,4 +51,3 @@ function sortTable(n) {
            
      }
     }
-   

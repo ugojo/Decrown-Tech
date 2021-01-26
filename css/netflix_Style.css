@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#logo{
+    width: 90px;
+}
+button{
+    cursor: pointer;
+    position: absolute;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 22px;
+}
+button#open{
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+}
+button#close{
+    position: absolute;
+    top: 3px;
+    right: 40px;
+}
+.nav{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%);
+    transition: transform 0.3s ease-in-out;
+}
+.nav.visible{
+    transform: translateX(0);
+}
+.nav_black{
+    width: 60%;
+    background-color: black;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: 0.3s;
+}
+.nav_black.visible{
+    transition-delay: 0.1s;
+}
+.nav_red{
+    width: 95%;
+    background-color: red;
+    transition-delay: 0.2s;
+}
+.nav_red.visible{
+    transition-delay: 0.2s;
+}
+.nav_white{
+    width: 95%;
+    background-color: white;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0;
+}
+.nav_white.visible{
+    transition-delay: 0.4s;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+ul li {
+    margin: 20px 0;
+  }
+  
+ul li a {
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+img{
+    width: 50%;
+}

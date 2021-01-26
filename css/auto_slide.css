@@ -1,0 +1,47 @@
+ /* Auto Slide Style */
+ .row{
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     justify-content: center;
+ }
+ .autoSlideContainer{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+  }
+  .autoSlide{
+    display: none;
+    position: relative;
+    transition: .2s ease-out;
+  }
+  .autoSlideNum{
+    position: absolute;
+    top: 2px;
+    left: 20%; 
+  }
+  .autoslidetext{
+      position: absolute;
+      bottom: 5px;
+      left: 35%;
+      margin-left: 6px;
+      font-size: 25px;
+      color: white;
+  }
+  .autodot{
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: wheat;
+    cursor: pointer;
+    transition: background .2s linear; 
+  }
+  .activeslide{
+      background-color: goldenrod;
+  }

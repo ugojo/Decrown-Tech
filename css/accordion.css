@@ -1,0 +1,56 @@
+/* Accordion */
+.row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after rows */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.accordion{
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color:  rgb(155, 137, 113);
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    
+}
+.active{
+    background-color: rgb(199, 155, 97);
+}
+.panel{
+    display: none;
+    max-height: 0;
+    padding: 2px 20px;
+    transition: max-height .2s ease-out;  
+}
+.accordion::after{
+    content: "\02795";
+    display: block;
+    font-size: 15px;
+    float: right;
+    color: wheat;
+    transition: .3s ;
+}
+.activeAcc::after{
+    content: "\02796";
+    color: black;
+    transition: .3s ;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <link rel="stylesheet" href="./css/tab_css.css">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+          <div class="content">
+            <div class="btn-container">
+              <button class="tabLinks" id="defultOpen" onclick="myTab('page_1' ,this,'red')"> page_1</button>
+              <button class="tabLinks" onclick="myTab('page_2',this, 'greenyellow')"> page_2</button>
+              <button class="tabLinks" onclick="myTab('page_3' ,this, 'green')"> page_3</button>
+              <button class="tabLinks" onclick="myTab('page_4' ,this , 'blue')"> page_4</button>
+            </div>
+            <div id="page_1"  class="tabcontent" > This is page One.</div>
+            <div id="page_2" class="tabcontent"> This is page Two.</div>
+            <div id="page_3" class="tabcontent"> This is page Three.</div>
+            <div id="page_4" class="tabcontent"> This is page Four</div>
+          <!---END TAB-->
+          </div>
+        </div>
+    </div>
+</body>
+<script src="./js/tab.js"></script>
+</html>

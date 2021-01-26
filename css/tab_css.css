@@ -1,0 +1,28 @@
+/* Tab */
+.btn-container{
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+}
+.tabLinks{
+   padding: 5px;
+   background-color: #555;
+   color: white;
+   cursor: pointer;
+   border: none;
+   outline: none;
+}
+.tabcontent{
+    display: none;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    color: white;
+    padding: 100px 20px;
+    border-left: none;   
+}
+
+#page_1{ background-color: red;}
+#page_2{ background-color:greenyellow;}
+#page_3{background-color:green;}
+#page_4{background-color: blue;}
