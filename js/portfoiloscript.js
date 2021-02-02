@@ -85,7 +85,7 @@ const gridElement = document.getElementById("projectEl")
                           <img src="ugojo.github.io/GitHub/Decrown-Tech/img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
                           <div class="content">  <a 
-                          href="https://ugojo.github.io/GitHub/Decrown-Tech/Decrown-Tech/${project.name}"
+                          href="https://ugojo.github.io/GitHub/Decrown-Tech/${project.Name}"
                           target="_blank"
                           class="btn btn-primary">Live Demo </a>   
                           </div>`
