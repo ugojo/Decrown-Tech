@@ -26,7 +26,7 @@ const projects = [
      },
      {
          number: 6,
-         Name : 'form',
+         Name : 'login',
          imgLink: 'form.png',
      },
      {
@@ -36,12 +36,12 @@ const projects = [
      },
      {
          number: 8,
-         Name:'netflix_mobile',
+         Name:'NetflixCopy',
          imgLink : 'netflix_mobile.png',
      },
      {
          number: 9,
-         Name : 'Quiz_app',
+         Name : 'QuizApp',
          img_name: 'Quiz_app.png',
      },{
          number: 10 ,
@@ -55,7 +55,7 @@ const projects = [
      },
      {
          number: 12,
-         Name: 'slide_gallery.png',
+         Name: 'grallery',
          imgLink: 'slide_gallery.png',
      },
      {
@@ -72,7 +72,12 @@ const projects = [
          number: 15,
          Name: 'zoom',
          imgLink: 'zoom.png',
-     }
+     },
+     {
+        number: 16,
+        Name: 'zoom1',
+        imgLink: 'zoom.png',
+    }
 ]
 
 const gridElement = document.getElementById("projectEl")
