@@ -84,14 +84,15 @@ const gridElement = document.getElementById("projectEl")
                           <span class="project_nmuber">${project.number}</span>
                           <img src="img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
-                          <div class="content">  <a 
+                          <div class="content">
                           <a
                           href="/Decrown-Tech/${project.Name}"
                           target="_blank"
                           class="btn btn-primary"
                           >Live Demo</a
                            >
-                          </div>`
+                          </div>
+                          `;
 
           gridElement.appendChild(newElement)
       });
