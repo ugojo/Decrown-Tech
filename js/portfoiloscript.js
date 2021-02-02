@@ -81,8 +81,8 @@ const gridElement = document.getElementById("projectEl")
          newElement = document.createElement("div")
            
          newElement.innerHTML = `
-                          <span class="project_nmuber">${ project.number}</span>
-                          <img src="GitHub/Decrown-Tech/img/${project.imgLink} alt="${project.Name}">
+                          <span class="project_nmuber">${project.number}</span>
+                          <img src="img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
                           <div class="content">  <a 
                           href="GitHub/Decrown-Tech/${project.Name}"
