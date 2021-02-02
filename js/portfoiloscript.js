@@ -85,7 +85,7 @@ const gridElement = document.getElementById("projectEl")
       projects.forEach(project => {
          newElement = document.createElement("div")
            
-         newElement.innerText = `
+         newElement.innerHTML = `
                           <span class="project_nmuber">${project.number}</span>
                           <img src="img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
