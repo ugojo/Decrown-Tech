@@ -91,7 +91,7 @@ const gridElement = document.getElementById("projectEl")
                           <h4> ${project.Name} </h4>
                           <div class="content">
                           <a
-                          href="/Decrown-Tech/${project.Name}"
+                          href="/Decrown-Tech/${project.Name}.html"
                           target="_blank"
                           class="btn btn-primary"
                           >Live Demo</a
