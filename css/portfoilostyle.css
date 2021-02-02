@@ -1,182 +1,75 @@
-.warpper {
+*{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+}
+ .projectsEl {
     display: grid;
-    position: relative;
-    grid-template-columns: repeat(12,1fr);
-    min-width: 90%;
-    margin: 0;
-    padding: 0;
-    gap: 10px;
-}
-.header {
-    grid-column: 1/13;
-    background-color: black;
-    color: white;
-    
-}
-.nav {
-   grid-column: 1/13;
-}
-.acticle {
-    grid-column: 1/13;
-    background-color: rgb(124, 124, 124);
-    text-align: center;
-}
-.section {
-    grid-column:1/13 ;
-    background-color: teal;
-    justify-content: center;
-    justify-self: center;
-    
-}
-.aside {
-    grid-column: 1/13;
-    justify-content: center;
-    justify-self: center;
-    
-}
-.footer {
-grid-column: 1/13;
-}
-/*-------- Overlay nav --------*/
-.header{
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+  }
+  .projectsEl img {
+    width: 100%;
     height: 100%;
-    width: 0;
-    top: 0;
-    left: 0;
-    text-align: center;
-    justify-content: center;
-    padding-bottom: 10px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    opacity: .9;
-    z-index: 2;
-    overflow-x: hidden;
-    transition: width 5s ;
-}
-ul{
-    display: block;
-    font-size: 25px;
-}
-li{
-    padding: 20px;
-    list-style: none;
-    display: block;
-}
-li a {
-    padding-top: 50px;
-    text-decoration: none;
-    color: white;
-}
-ul li ul li{
-    display: none;
-    font-size: 15px;
-}
-ul li:hover ul li{
-    display: block;
-    margin: 2px;
-    padding: 2px;
-    left: 0;
-    margin-right: 10px;
-}
-.nav-btn{
-    position: fixed;
-    font-size: 25px;
-    width: 40px;
-    top: 0;
-    left: 0;
-    border: none;
-    background-color: white;
+  }
+  .projectsEl > div {
+    position: relative;
     cursor: pointer;
-    z-index: 3;
-}
-.open-nav{
-    width: 40px;
-
-}
-.mysearch{
-   justify-self: center;
-   transform: translate(-50%,-50%);
-}
-.close-nav a{
-   float: right;
-   top: -2px;
-
-   padding: 8px;
-   text-decoration: none;
-   font-size: 70px;
-   display: block;
-   color: white;
-   transition: all 0.2s;
-}
-/*--------- Text ------------*/
-
-
-/*------- Body style--------*/
-
-/*------ Img ------------*/
-
-/*------- Responive*/
-@media  screen and (max-width:800px){
-    .srctxt{
-        display: none;
-    }  
-    .icon{
-        display: none;
+    height: 100%;
+  }
+  .projectsEl h4 {
+    font-size: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+  }
+  .projectsEl .project_nmuber {
+    background-color: rgb(75, 75, 75);
+    border-bottom-left-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .projectsEl div:hover .content {
+    opacity: 0.98;
+  }
+  .projectsEl .content {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #777677;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease-in;
+  }
+  .projectsEl .content p {
+    margin: 15px 5px;
+  }
+  @media (max-width: 960px) {
+    .projectsEl {
+      grid-template-columns: repeat(3, 1fr);
     }
-}
-@media  screen and (min-width:800px){
-    .header{
-          display: block;
-         min-width: 100%;
-          height: 100px;
-          padding-top: 0;
+  }
+  @media (max-width: 700px) {
+    .projectsEl {
+      grid-template-columns: repeat(2, 1fr);
     }
-    .open-nav{
-        display: none;
+  }
+  @media (max-width: 500px) {
+    .projectsEl {
+      grid-template-columns: 1fr;
     }
-    .close-nav{
-        display: none;
+  
     }
-    ul{
-        position: relative;
-        margin: 0 auto;
-        padding:0 ;
-    }
-    li{
-        display: block;
-        float: left;
-        left: 0;
-       
-    }
-    .header::after{
-        content: " ";
-        clear: both;
-        display: table;
-    }
-    .icon{
-        display: block;
-        color: white;
-    }
-    .fa-search{
-        background-color: dodgerblue;
-        color: white;
-        font-size: small;
-        border-radius: 0 3px 3px 0;
-    }
-    .mysearch{
-        border: 3px solid dodgerblue;
-    }
-    .mysearch:focus{
-        border: 1px solid dodgerblue;
-        outline: none;
-    }
-    .icon{
-        float: right;
-        right: 20%;
-        font-size: 15px;
-        
-    }
-}
