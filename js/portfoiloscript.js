@@ -82,7 +82,7 @@ const gridElement = document.getElementById("projectEl")
            
          newElement.innerHTML = `
                           <span class="project_nmuber">${ project.number}</span>
-                          <img src="./GitHub/Decrown-Tech/img/${project.imgLink} alt="${project.Name}">
+                          <img src="/GitHub/Decrown-Tech/img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
                           <div class="content">  <a 
                           href="/GitHub/Decrown-Tech/${project.name}"
