@@ -1,42 +1,42 @@
 const projects = [
      { 
        number: 1,
-       Name: 'Accordion',
+       Name: 'accordion',
        imgLink: 'accordion.png',
      },
      {
          number: 2,
-         Name:'Animated_nav',
+         Name:'animated_nav',
          imgLink:'animated_nav.png',
      },
      {
          number: 3,
-         Name: 'Auto_slide',
+         Name: 'auto_slide',
          imgLink: 'auto_slide.png',
      },
      {
          number : 4 ,
-         Name : 'Fillter',
+         Name : 'filter',
          imgLink : 'fillter.png',
      },
      {
          number : 5,
-         Name : 'Fillter_gallery',
+         Name : 'filter_gallery',
          imgLink:'fillter_gallery.png',
      },
      {
          number: 6,
-         Name : 'Form',
+         Name : 'form',
          imgLink: 'form.png',
      },
      {
          number : 7 ,
-         Name : 'Magnificent_glass',
+         Name : 'magnificent_glass',
          imgLink:'magnificent_glass.png',
      },
      {
          number: 8,
-         Name:'Netflix_mobile',
+         Name:'netflix_mobile',
          imgLink : 'netflix_mobile.png',
      },
      {
@@ -45,32 +45,32 @@ const projects = [
          img_name: 'Quiz_app.png',
      },{
          number: 10 ,
-         Name : 'Rotating_nav',
+         Name : 'rotating_nav',
          imgLink: 'rotating_nav.png',
      },
      {
          number: 11,
-         Name: 'Slide',
+         Name: 'slide',
          imgLink: 'slide.png',
      },
      {
          number: 12,
-         Name: 'Slide_gallery.png',
+         Name: 'slide_gallery.png',
          imgLink: 'slide_gallery.png',
      },
      {
          number: 13,
-         Name: 'Tab',
+         Name: 'tab',
          imgLink: 'tab.png',
      },
      {
          number: 14,
-         Name: 'Todo_list',
+         Name: 'todo_list',
          imgLink:'todo_list.png',
      },
      {
          number: 15,
-         Name: 'Zoom',
+         Name: 'zoom',
          imgLink: 'zoom.png',
      }
 ]
