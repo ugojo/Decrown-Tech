@@ -80,12 +80,12 @@ const gridElement = document.getElementById("projectEl")
       projects.forEach(project => {
          newElement = document.createElement("div")
            
-         newElement.innerHTML= `
+         newElement.innerHTML = `
                           <span class="project_nmuber">${project.number}</span>
                           <img src="img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
                           <div class="content">  <a 
-                          href="/Decrown-Tech/${project.Name}.html"
+                            href="/Decrown-Tech/${project.Name}.html"
                           target="_blank"
                           class="btn btn-primary">Live Demo </a>   
                           </div>`
