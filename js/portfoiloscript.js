@@ -85,9 +85,12 @@ const gridElement = document.getElementById("projectEl")
                           <img src="img/${project.imgLink} alt="${project.Name}">
                           <h4> ${project.Name} </h4>
                           <div class="content">  <a 
-                            href="/Decrown-Tech/${project.Name}.html"
+                          <a
+                          href="/Decrown-Tech/${project.Name}"
                           target="_blank"
-                          class="btn btn-primary">Live Demo </a>   
+                          class="btn btn-primary"
+                          >Live Demo</a
+                           >
                           </div>`
 
           gridElement.appendChild(newElement)
