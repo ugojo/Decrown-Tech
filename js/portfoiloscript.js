@@ -6,7 +6,7 @@ const projects = [
      },
      {
          number: 2,
-         Name:'animated_nav',
+         Name:'animated_navbar',
          imgLink:'animated_nav.png',
      },
      {
@@ -65,7 +65,7 @@ const projects = [
      },
      {
          number: 14,
-         Name: 'todo_list',
+         Name: 'todo-list',
          imgLink:'todo_list.png',
      },
      {
