@@ -46,12 +46,12 @@ const projects = [
      },{
          number: 10 ,
          Name : 'rotating_nav',
-         imgLink: 'rotating_nav.png',
+         imgLink: 'rotating_nav.PNG',
      },
      {
          number: 11,
          Name: 'slide',
-         imgLink: 'slide.png',
+         imgLink: 'slide.PNG',
      },
      {
          number: 12,
