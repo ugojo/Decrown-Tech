@@ -42,16 +42,16 @@ const projects = [
      {
          number: 9,
          Name : 'QuizApp',
-         img_name: 'QuizApp.png',
+         img_name: 'Quizpp.png',
      },{
          number: 10 ,
          Name : 'rotating_nav',
-         imgLink: 'rotating_nav.PNG',
+         imgLink: 'rotating_nav.png',
      },
      {
          number: 11,
          Name: 'slide',
-         imgLink: 'slide.PNG',
+         imgLink: 'slide.png',
      },
      {
          number: 12,
