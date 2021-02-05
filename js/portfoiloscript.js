@@ -82,7 +82,7 @@ const gridElement = document.getElementById("projectEl")
            
          newElement.innerHTML = `
                           <span class="project_nmuber">${project.number}</span>
-                          <img src="./img/${project.imgLink}" alt="${project.Name}">
+                          <img src="img/${project.imgLink}" alt="${project.Name}">
                           <div class="content">
                           <h4> ${project.Name} </h4>
                           <a
