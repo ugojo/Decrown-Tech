@@ -42,7 +42,7 @@ const projects = [
      {
          number: 9,
          Name : 'QuizApp',
-         img_name: 'Quiz_app.png',
+         img_name: 'QuizApp.png',
      },{
          number: 10 ,
          Name : 'rotating_nav',
@@ -72,12 +72,7 @@ const projects = [
          number: 15,
          Name: 'zoom',
          imgLink: 'zoom.png',
-     },
-     {
-        number: 16,
-        Name: 'zoom1',
-        imgLink: 'zoom.png',
-    }
+     }
 ]
 
 const gridElement = document.getElementById("projectEl")
@@ -87,9 +82,9 @@ const gridElement = document.getElementById("projectEl")
            
          newElement.innerHTML = `
                           <span class="project_nmuber">${project.number}</span>
-                          <img src="./img/${project.imgLink} alt="${project.Name}">
-                          <h4> ${project.Name} </h4>
+                          <img src="./img/${project.imgLink}" alt="${project.Name}">
                           <div class="content">
+                          <h4> ${project.Name} </h4>
                           <a
                           href="/Decrown-Tech/${project.Name}.html"
                           target="_blank"

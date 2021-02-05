@@ -57,6 +57,10 @@ body{
   .projectsEl .content p {
     margin: 15px 5px;
   }
+  .projectsEl .content img{
+     width: 100%;
+     height: 100%;
+  }
   @media (max-width: 960px) {
     .projectsEl {
       grid-template-columns: repeat(3, 1fr);
